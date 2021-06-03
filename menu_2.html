@@ -6,10 +6,80 @@
         <title>Ohmyfood!</title>
         <link rel="stylesheet" href="style.css" />
         <script src="https://kit.fontawesome.com/398574a0d4.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+            @media screen and (max-width: 767px) {
+                body{
+                    font-family: 'Roboto', sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color:yellow;
+                }
+                h1{
+                    font-family :'Shrikhand', cursive;
+                }
+                ul{
+                   list-style-type: none;
+                }
+            }
+            @media screen and (min-width: 768px) and (max-width: 1023px){
+                body{
+                    font-family: 'Roboto', sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: green;
+                }
+                h1{
+                    font-family :'Shrikhand', cursive;
+                }
+                ul{
+                    list-style-type: none;
+                }
+            }
+            @media screen and (min-width: 1024px){
+                body{
+                    font-family: 'Roboto', sans-serif;
+                    margin: 0px auto;
+                    max-width: 1500px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: gray;
+                }  
+                h1{
+                    font-family :'Shrikhand', cursive;
+                }
+                ul{
+                    list-style-type: none;
+                }              
+            }
+        </style>
     </head>
     <body>
         <header>
-            <img src="Maquettes Ohmyfood/images/logo/ohmyfood.png"/>
+            <i class="fas fa-arrow-left"></i>
+            <img src="Maquettes Ohmyfood/images/logo/ohmyfood.png" style="width:160px"/>
         </header>
     </body>
+    <footer>
+        <img src="Maquettes Ohmyfood/images/logo/ohmyfood.png" style="width:100px"/>
+        <ul>
+            <li>
+                <i class="fas fa-utensils"></i>
+                <a href="#">Proposer un restaurant</a>
+            </li>
+            <li>
+                <i class="fas fa-handshake"></i>
+                <a href="#">Devenir partenaire</a>
+            </li>
+            <li>
+                <a href="#">Mentions légales</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </footer>
 </html>
