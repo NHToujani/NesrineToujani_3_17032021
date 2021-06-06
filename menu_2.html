@@ -11,13 +11,22 @@
             @media screen and (max-width: 767px) {
                 body{
                     font-family: 'Roboto', sans-serif;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background-color:yellow;
+                }
+                header > i{
+                    position: absolute;
+                    margin: 20px 0 25px 20px;
+
+                }
+                header > div{
+
+                }
+                section > img{
+                    width: 100%;
+                    height: 255px;
+                    object-fit: cover;
                 }
                 h1{
-                    font-family :'Shrikhand', cursive;
+                    font-family :'Shrikhand', sans-serif;
                 }
                 ul{
                    list-style-type: none;
@@ -26,13 +35,17 @@
             @media screen and (min-width: 768px) and (max-width: 1023px){
                 body{
                     font-family: 'Roboto', sans-serif;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background-color: green;
+                }
+                header > i{
+                    position: absolute;
+                    margin: 20px 0 25px 20px;
+
+                }
+                header > div{
+
                 }
                 h1{
-                    font-family :'Shrikhand', cursive;
+                    font-family :'Shrikhand', sans-serif;
                 }
                 ul{
                     list-style-type: none;
@@ -43,13 +56,20 @@
                     font-family: 'Roboto', sans-serif;
                     margin: 0px auto;
                     max-width: 1500px;
-                    display: flex;
+                    /* display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    background-color: gray;
-                }  
+                    align-items: center; */
+                } 
+                header > i{
+                    position: absolute;
+                    margin: 20px 0 25px 20px;
+
+                }
+                header > div{
+
+                } 
                 h1{
-                    font-family :'Shrikhand', cursive;
+                    font-family :'Shrikhand', sans-serif;
                 }
                 ul{
                     list-style-type: none;
@@ -62,6 +82,78 @@
             <i class="fas fa-arrow-left"></i>
             <img src="Maquettes Ohmyfood/images/logo/ohmyfood.png" style="width:160px"/>
         </header>
+        <section>
+            <img src="Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"/>
+            <article>
+                <div>
+                    <h1>La note enchantée</h1>
+                    <i class="far fa-heart"></i>
+                </div>
+                <h3>ENTREES</h3>
+                <div>
+                    <h3>Ravioles de foie gras</h3>
+                    <p>Accompagnées de leur crème à la truffe</p>
+                    <p>25€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <h3>Caviar osciètre</h3>
+                    <p>Sur blini à la farine de blé noir</p>
+                    <p>35€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <h3>Homard et espuma de...</h3>
+                    <p>Mariné aux zests d'orange</p>
+                    <p>20€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                    <h3>Foie gras de canard cuit entier</h3>
+                    <p>Confiture de figue et pain toasté</p>
+                    <p>35€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>PLATS</h3>
+                <div>
+                    <h3>Noix de coquilles Saint-Jacques</h3>
+                    <p>Sur lit de purée de céleri-rave</p>
+                    <p>40€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <h3>Langoustine poêlée</h3>
+                    <p>Purée de patate douce</p>
+                    <p>35€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <h3>Mijoté de queue de boeuf</h3>
+                    <p>Et riz sauvage aux zests de citron</p>
+                    <p>€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>DESSRTS</h3>
+                <div>
+                    <h3>Macaron noisette et chocolat</h3>
+                    <p>Glace au caramel brun et sel de Guérande</p>
+                    <p>18€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <h3>Baba au rhum revisité</h3>
+                    <p>Avec son coulis de citron</p>
+                    <p>22€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <h3>Tarte au citron meringuée</h3>
+                    <p>Destructurée</p>
+                    <p>23€</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </article>
+            <button>Commander</button>
+        </section>
     </body>
     <footer>
         <img src="Maquettes Ohmyfood/images/logo/ohmyfood.png" style="width:100px"/>
@@ -78,8 +170,7 @@
                 <a href="#">Mentions légales</a>
             </li>
             <li>
-                <a href="#">Contact</a>
-            </li>
+                <a href="mailto:nesrine.hamriteptoujani@gmail.com">Contact</a>            </li>
         </ul>
     </footer>
 </html>
