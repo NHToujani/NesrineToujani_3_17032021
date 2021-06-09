@@ -1,0 +1,170 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1500px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .logo_header {
+  width: 165px;
+  height: 30px;
+}
+
+.localisation {
+  display: inline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.localisation_element {
+  font-size: 1em;
+  font-weight: 500;
+  color: #393939;
+  text-align: center;
+  background-color: #EAEAEA;
+  padding: 13px 0;
+  -webkit-box-shadow: inset 0 2.5px 3px #d5d5d5;
+          box-shadow: inset 0 2.5px 3px #d5d5d5;
+}
+
+.localisation h1 {
+  display: inline-block;
+  font-size: 1em;
+}
+
+.fonctionnement h2 {
+  font-size: 1.6em;
+  padding: 30px 20px;
+}
+
+.fonctionnement_step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fonctionnement_btn {
+  width: 80%;
+  height: 65px;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 2px 11px #d5d5d5;
+          box-shadow: 1px 2px 11px #d5d5d5;
+  margin: 0 0 30px 0;
+  cursor: pointer;
+}
+
+.fonctionnement_btn .btn__num {
+  width: 23px;
+  height: 23px;
+  font-size: 0.8em;
+  color: white;
+  text-align: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  left: -12.5px;
+  top: 23px;
+  line-height: 25px;
+  position: relative;
+}
+
+.fonctionnement_btn .fas {
+  padding: 0 20px 0 30px;
+  color: #7E7E7E;
+}
+
+.fonctionnement_btn span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F6F6F6;
+}
+
+.btn {
+  background-color: #9356DC;
+  color: #FFF;
+  border-radius: 3rem;
+  width: 60%;
+  padding: 1rem;
+}
+
+.restaurant {
+  background-color: #F6F6F6;
+}
+
+.restaurant img {
+  height: 175px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  background-color: #353535;
+}
+
+footer h3 {
+  padding: 1em 0 0 2em;
+  font-family: "Shrikhand";
+  color: #FFFFFF;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul i {
+  color: #FFFFFF;
+}
+
+ul a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header > img {
+    width: 160px;
+  }
+  div > img {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0px auto;
+  }
+  section {
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+}
+/*# sourceMappingURL=style.css.map */
