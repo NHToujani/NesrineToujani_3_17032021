@@ -34,6 +34,34 @@ header{
         font-size: 1em;
     }
 }
+.presentation{
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    text-align: center;
+    padding: 20px 20px 30px;
+    &_title{
+        margin-bottom: 0;
+        color: #313131;
+        padding: 0 20px;
+    }
+    &_text{
+        color: #969696;
+    }
+    &_btn{
+        width: 60%;
+        height: 50px;
+        align-self: center;
+        border: 1px solid transparent;
+        border-radius: 25px ;
+        background: linear-gradient(175deg, $secondry, 45%, $primary);
+        color: #FFFFFF;
+        font-size: 14px;
+        box-shadow: inset 0 2.5px 3px #d5d5d5;
+    }
+
+
+}
 .fonctionnement{
     h2{
         font-size: 1.6em;
@@ -76,13 +104,7 @@ header{
     } 
 }
 
-.presentation{
-    display: flex;
-    flex-direction: column;
-    background-color: #F6F6F6;
 
-
-}
 .btn{
     background-color: $primary;
     color: #FFF;
@@ -92,29 +114,62 @@ header{
 }
 .restaurant{
     background-color: #F6F6F6;
-
-    img{
-    height: 175px;
-    width: 100%;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0;
+    h2{
+        padding-left: 20px;
     }
-}
-footer{
-    background-color: #353535;
-    h3{
-        padding: 1em 0 0 2em;
-        font-family: $font-title;
-        color: #FFFFFF;
-    }
-}
-ul{
-    list-style-type: none;
-    i{
-        color: #FFFFFF;
+    &_menu{
+        background-color: #ffffff;
+        width: 90%;
+        align-self: center;
+        border-radius: 25px;
     }
     a{
         text-decoration: none;
-        color: #FFF;
+        img{
+            height: 175px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
+        }
+        h3{
+            margin: 1em 0 -0.5em 1em;
+            font-weight: 600;
+        }
+        p{
+            margin-left: 1em;
+        }
+        i{
+            float: right;
+            position: relative;
+            font-size: x-large;
+            bottom: 50px;
+            right: 25px;
+        }
+    }
+
+}
+footer{
+    background-color: #353535;
+    padding: 15px 0;
+    h3{
+        padding: 0 0 0 1.5em;
+        font-family: $font-title;
+        color: #FFFFFF;
+    }
+    ul{
+        padding: 0 1.5em;
+        list-style-type: none;
+        i{
+        color: #FFFFFF;
+        }
+        a{
+            text-decoration: none;
+            color: #FFF;
+        }
     }
 }
 

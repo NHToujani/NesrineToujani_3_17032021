@@ -43,6 +43,44 @@ header .logo_header {
   font-size: 1em;
 }
 
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 20px 20px 30px;
+}
+
+.presentation_title {
+  margin-bottom: 0;
+  color: #313131;
+  padding: 0 20px;
+}
+
+.presentation_text {
+  color: #969696;
+}
+
+.presentation_btn {
+  width: 60%;
+  height: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  background: linear-gradient(175deg, #FF79DA, 45%, #9356DC);
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-box-shadow: inset 0 2.5px 3px #d5d5d5;
+          box-shadow: inset 0 2.5px 3px #d5d5d5;
+}
+
 .fonctionnement h2 {
   font-size: 1.6em;
   padding: 30px 20px;
@@ -96,17 +134,6 @@ header .logo_header {
   font-weight: 600;
 }
 
-.presentation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #F6F6F6;
-}
-
 .btn {
   background-color: #9356DC;
   color: #FFF;
@@ -117,34 +144,80 @@ header .logo_header {
 
 .restaurant {
   background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 50px 0;
 }
 
-.restaurant img {
+.restaurant h2 {
+  padding-left: 20px;
+}
+
+.restaurant_menu {
+  background-color: #ffffff;
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 25px;
+}
+
+.restaurant a {
+  text-decoration: none;
+}
+
+.restaurant a img {
   height: 175px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.restaurant a h3 {
+  margin: 1em 0 -0.5em 1em;
+  font-weight: 600;
+}
+
+.restaurant a p {
+  margin-left: 1em;
+}
+
+.restaurant a i {
+  float: right;
+  position: relative;
+  font-size: x-large;
+  bottom: 50px;
+  right: 25px;
 }
 
 footer {
   background-color: #353535;
+  padding: 15px 0;
 }
 
 footer h3 {
-  padding: 1em 0 0 2em;
+  padding: 0 0 0 1.5em;
   font-family: "Shrikhand";
   color: #FFFFFF;
 }
 
-ul {
+footer ul {
+  padding: 0 1.5em;
   list-style-type: none;
 }
 
-ul i {
+footer ul i {
   color: #FFFFFF;
 }
 
-ul a {
+footer ul a {
   text-decoration: none;
   color: #FFF;
 }
