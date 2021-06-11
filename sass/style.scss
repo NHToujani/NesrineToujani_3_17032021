@@ -3,8 +3,10 @@ $font-text: 'Roboto';
 $primary:#9356DC;
 $secondry:#FF79DA;
 $tertiary: #99E2D0;
+$shadow: #d5d5d5;
+$background: #F6F6F6;
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-text, sans-serif;
     max-width: 1500px;
     margin: 0;
     padding: 0;
@@ -15,6 +17,12 @@ header{
     .logo_header{
         width: 165px;
         height: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        div{
+            img{
+            width: 335px;}
+        }        
     }
 }
 .localisation{
@@ -27,7 +35,7 @@ header{
         text-align: center;
         background-color: #EAEAEA;
         padding: 13px 0;
-        box-shadow: inset 0 2.5px 3px #d5d5d5;
+        box-shadow: inset 0 2.5px 3px $shadow;
     }
     h1{
         display: inline-block;
@@ -37,7 +45,7 @@ header{
 .presentation{
     display: flex;
     flex-direction: column;
-    background-color: #F6F6F6;
+    background-color: $background;
     text-align: center;
     padding: 20px 20px 30px;
     &_title{
@@ -57,10 +65,8 @@ header{
         background: linear-gradient(175deg, $secondry, 45%, $primary);
         color: #FFFFFF;
         font-size: 14px;
-        box-shadow: inset 0 2.5px 3px #d5d5d5;
+        box-shadow: inset 0 2.5px 3px $shadow;
     }
-
-
 }
 .fonctionnement{
     h2{
@@ -75,9 +81,9 @@ header{
     &_btn{
         width: 80%;
         height: 65px;
-        background-color: #F6F6F6;
+        background-color: $background;
         border-radius: 15px;
-        box-shadow: 1px 2px 11px #d5d5d5;
+        box-shadow: 1px 2px 11px $shadow;
         margin: 0 0 30px 0;
         cursor: pointer;
         .btn__num{
@@ -86,7 +92,7 @@ header{
             font-size: 0.8em;
             color: white;
             text-align: center;
-            background-color: #9356DC;
+            background-color: $primary;
             border-radius: 50%;
             left: -12.5px;
             top: 23px;
@@ -103,8 +109,6 @@ header{
         }
     } 
 }
-
-
 .btn{
     background-color: $primary;
     color: #FFF;
@@ -113,7 +117,7 @@ header{
     padding: 1rem;
 }
 .restaurant{
-    background-color: #F6F6F6;
+    background-color: $background;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -126,7 +130,7 @@ header{
         width: 90%;
         align-self: center;
         border-radius: 25px;
-    }
+    }   
     a{
         text-decoration: none;
         img{
@@ -150,7 +154,6 @@ header{
             right: 25px;
         }
     }
-
 }
 footer{
     background-color: #353535;
@@ -172,14 +175,55 @@ footer{
         }
     }
 }
-
-@media screen and (min-width: 768px) and (max-width: 1023px){
-header > img{
-    width: 160px
+// Page des Menus
+.header_menu{
+    i{
+    position: absolute;
+    margin: 20px 0 25px 20px;
+    div{
+    display: flex;
+    flex-direction: row;
 }
-div > img{
-    width: 335px;
-} 
+h1{
+    font-family :$font-title, sans-serif;
+}
+ul{
+   list-style-type: none;
+}
+section > img{
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+}
+.menu{
+    padding: 30px 20px;
+    position: sticky;
+    background-color: $background;
+    border-radius: 50px 50px 0 0;
+    margin-top: -55px;
+    &_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: x-large;
+        h1{
+            margin: 0;
+        }
+        i{
+            margin-right: 20px;
+        }
+    }    
+}
+.btn{
+    width: 60%;
+    height: 50px;
+    align-self: center;
+    border: 1px solid transparent;
+    border-radius: 25px ;
+    background: linear-gradient(175deg, $secondry, 45%, $primary);
+    color: #FFFFFF;
+    font-size: 14px;
+    box-shadow: inset 0 2.5px 3px $shadow;
 }
 @media screen and (min-width: 1024px){
 body{
@@ -188,4 +232,63 @@ body{
 section{
 align-content: space-between;
 }           
+}
+// Page des Menus
+// body{
+//     font-family: $font-text, sans-serif;
+// }
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+// body{
+//     font-family: '$font-text', sans-serif;
+// }
+// header > i{
+//     position: absolute;
+//     margin: 20px 0 25px 20px;
+
+// }
+// header > div{
+//     display: flex;
+//     flex-direction: row
+// }
+// h1{
+//     font-family :$font-title, sans-serif;
+// }
+// header > i{
+//     position: absolute;
+//     margin: 20px 0 25px 20px;
+
+// }
+// header > div{
+//     display: flex;
+//     flex-direction: row;
+
+// }
+// ul{
+//     list-style-type: none;
+//     }
+// section > img{
+//     width: 100%;
+//     height: 255px;
+//     object-fit: cover;
+// }
+}
+
+@media screen and (min-width: 1024px){
+// body{
+//     font-family: '$font-text', sans-serif;
+//     margin: 0px auto;
+//     max-width: 1500px;
+// }
+// h1{
+//     font-family :$font-title, sans-serif;
+// }
+// ul{
+//     list-style-type: none;
+//     }
+// section > img{
+//     width: 100%;
+//     height: 255px;
+//     object-fit: cover;
+// }
 }

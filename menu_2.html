@@ -1,152 +1,97 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ohmyfood!</title>
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://kit.fontawesome.com/398574a0d4.js" crossorigin="anonymous"></script>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-            @media screen and (max-width: 767px) {
-                body{
-                    font-family: 'Roboto', sans-serif;
-                }
-                header > i{
-                    position: absolute;
-                    margin: 20px 0 25px 20px;
-
-                }
-                
-                section > img{
-                    width: 100%;
-                    height: 255px;
-                    object-fit: cover;
-                }
-                h1{
-                    font-family :'Shrikhand', sans-serif;
-                }
-                ul{
-                   list-style-type: none;
-                }
-            }
-            @media screen and (min-width: 768px) and (max-width: 1023px){
-                body{
-                    font-family: 'Roboto', sans-serif;
-                }
-                header > i{
-                    position: absolute;
-                    margin: 20px 0 25px 20px;
-
-                }
-                
-                h1{
-                    font-family :'Shrikhand', sans-serif;
-                }
-                ul{
-                    list-style-type: none;
-                }
-            }
-            @media screen and (min-width: 1024px){
-                body{
-                    font-family: 'Roboto', sans-serif;
-                    margin: 0px auto;
-                    max-width: 1500px;
-                    /* display: flex;
-                    flex-direction: column;
-                    align-items: center; */
-                } 
-                header > i{
-                    position: absolute;
-                    margin: 20px 0 25px 20px;
-
-                }
-                 
-                h1{
-                    font-family :'Shrikhand', sans-serif;
-                }
-                ul{
-                    list-style-type: none;
-                }              
-            }
-        </style>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood!</title>
+    <link rel="stylesheet" type="text/css" href="sass/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap">
+    <script src="https://kit.fontawesome.com/398574a0d4.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
+        <header class="header_menu">
             <a href="./index.html">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <img src="./images/logo/ohmyfood.png" style="width:160px"/>
+            <img src="./images/logo/ohmyfood.png"/>
         </header>
         <section>
             <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"/>
-            <article>
-                <div>
+            <article class="menu_contenu">
+                <div class="menu_title">
                     <h1>La note enchantée</h1>
                     <i class="far fa-heart"></i>
                 </div>
                 <h3>ENTREES</h3>
-                <div>
+                <ul>
+                <li>
                     <h3>Ravioles de foie gras</h3>
                     <p>Accompagnées de leur crème à la truffe</p>
-                    <p>25€</p>
+                    <span>25€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
-                <div>
+                </li>
+                <li>
                     <h3>Caviar osciètre</h3>
                     <p>Sur blini à la farine de blé noir</p>
-                    <p>35€</p>
+                    <span>35€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
+                </li>
                 <div>
                     <h3>Homard et espuma de...</h3>
                     <p>Mariné aux zests d'orange</p>
-                    <p>20€</p>
+                    <span>20€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
+                </li>
                     <h3>Foie gras de canard cuit entier</h3>
                     <p>Confiture de figue et pain toasté</p>
-                    <p>35€</p>
+                    <span>35€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
+                </li>
+                </ul>
                 <h3>PLATS</h3>
-                <div>
+                <ul>
+                <li>
                     <h3>Noix de coquilles Saint-Jacques</h3>
                     <p>Sur lit de purée de céleri-rave</p>
-                    <p>40€</p>
+                    <span>40€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
-                <div>
+                </li>
+                <li>
                     <h3>Langoustine poêlée</h3>
                     <p>Purée de patate douce</p>
-                    <p>35€</p>
+                    <span>35€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
-                <div>
+                </li>
+                <li>
                     <h3>Mijoté de queue de boeuf</h3>
                     <p>Et riz sauvage aux zests de citron</p>
-                    <p>€</p>
+                    <span>€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
+                </li>
+                </ul>
                 <h3>DESSRTS</h3>
-                <div>
+                <ul>
+                <li>
                     <h3>Macaron noisette et chocolat</h3>
                     <p>Glace au caramel brun et sel de Guérande</p>
-                    <p>18€</p>
+                    <span>18€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
-                <div>
+                </li>
+                <li>
                     <h3>Baba au rhum revisité</h3>
                     <p>Avec son coulis de citron</p>
-                    <p>22€</p>
+                    <span>22€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
-                <div>
+                </li>
+                <li>
                     <h3>Tarte au citron meringuée</h3>
                     <p>Destructurée</p>
-                    <p>23€</p>
+                    <span>23€</span>
                     <i class="fas fa-check-circle"></i>
-                </div>
+                </li>
+                </ul>
             </article>
             <button>Commander</button>
         </section>
