@@ -1,0 +1,22 @@
+{
+  "name": "projet3oc",
+  "version": "1.0.0",
+  "description": "projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./sass/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NHToujani/NesrineToujani_3_17032021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/NHToujani/NesrineToujani_3_17032021/issues"
+  },
+  "homepage": "https://github.com/NHToujani/NesrineToujani_3_17032021#readme",
+  "dependencies": {
+  }
+}
