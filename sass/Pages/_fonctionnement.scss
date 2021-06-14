@@ -1,0 +1,41 @@
+.fonctionnement {
+    h2 {
+      font-size: 1.6em;
+      padding: 30px 20px;
+    }
+    &_step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &_btn {
+      width: 80%;
+      height: 65px;
+      background-color: $background;
+      border-radius: 15px;
+      box-shadow: 1px 2px 11px $shadow;
+      margin: 0 0 30px 0;
+      cursor: pointer;
+      .btn__num {
+        width: 23px;
+        height: 23px;
+        font-size: 0.8em;
+        color: white;
+        text-align: center;
+        background-color: $primary;
+        border-radius: 50%;
+        left: -12.5px;
+        top: 23px;
+        line-height: 25px;
+        position: relative;
+      }
+      .fas {
+        padding: 0 20px 0 30px;
+        color: #7e7e7e;
+      }
+      span {
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }

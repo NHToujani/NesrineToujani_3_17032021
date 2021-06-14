@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: center;
+    .logo_header {
+      width: 165px;
+      height: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      div {
+        img {
+          width: 335px;
+        }
+      }
+    }
+}
+.header_menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    i {
+      position: absolute;
+      margin: 10px 30px 0;
+    }
+}

@@ -1,0 +1,39 @@
+.restaurant {
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0;
+    h2 {
+      padding-left: 20px;
+    }
+    &_menu {
+      background-color: #ffffff;
+      width: 90%;
+      align-self: center;
+      border-radius: 25px;
+    }
+    a {
+      text-decoration: none;
+      img {
+        height: 175px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px 25px 0 0;
+      }
+      h3 {
+        margin: 1em 0 -0.5em 1.5em;
+        font-weight: 600;
+      }
+      p {
+        margin-left: 1em;
+      }
+      i {
+        float: right;
+        position: relative;
+        font-size: x-large;
+        bottom: 50px;
+        right: 25px;
+      }
+    }
+  }

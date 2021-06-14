@@ -1,8 +1,22 @@
-body {
-  font-family: "Roboto", sans-serif;
-  max-width: 1500px;
-  margin: 0;
-  padding: 0;
+footer {
+  background-color: #353535;
+  padding: 15px 0;
+}
+footer h3 {
+  padding: 0 0 0 1.5em;
+  font-family: "Shrikhand", cursive;
+  color: #ffffff;
+}
+footer ul {
+  padding: 0 1.5em;
+  list-style-type: none;
+}
+footer ul i {
+  color: #ffffff;
+}
+footer ul a {
+  text-decoration: none;
+  color: #fff;
 }
 
 header {
@@ -17,6 +31,23 @@ header .logo_header {
   header div img {
     width: 335px;
   }
+}
+
+.header_menu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+}
+.header_menu i {
+  position: absolute;
+  margin: 10px 30px 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif, sans-serif;
+  max-width: 1500px;
+  margin: 0;
+  padding: 0;
 }
 
 .localisation {
@@ -144,38 +175,8 @@ header .logo_header {
   right: 25px;
 }
 
-footer {
-  background-color: #353535;
-  padding: 15px 0;
-}
-footer h3 {
-  padding: 0 0 0 1.5em;
-  font-family: "Shrikhand";
-  color: #ffffff;
-}
-footer ul {
-  padding: 0 1.5em;
-  list-style-type: none;
-}
-footer ul i {
-  color: #ffffff;
-}
-footer ul a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.header_menu i {
-  position: absolute;
-  margin: 20px 0 25px 20px;
-}
-.header_menu div {
-  display: flex;
-  flex-direction: row;
-}
-
 h1 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Shrikhand", cursive, sans-serif;
 }
 
 ul {
