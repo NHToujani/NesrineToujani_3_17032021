@@ -1,7 +1,7 @@
 {
-  "name": "projet3oc",
+  "name": "project3oc",
   "version": "1.0.0",
-  "description": "projet3",
+  "description": "project3",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/style.scss:./public/style.css"
