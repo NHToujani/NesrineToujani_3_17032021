@@ -11,7 +11,21 @@
       background-color: $white;
       width: 90%;
       align-self: center;
-      border-radius: 25px;
+      border-radius: 15px;
+      .etiquette{
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 3px;
+        background-color: $tertiary;
+        font-size: 0.9em;
+        font-weight: 500;
+        color: #0F9070;
+        text-align: center;
+        position: absolute;
+        margin: 13px 20px;
+        right: 13px;
+      }
     }
     a {
       text-decoration: none;
@@ -19,7 +33,7 @@
         height: 175px;
         width: 100%;
         object-fit: cover;
-        border-radius: 25px 25px 0 0;
+        border-radius: 15px 15px 0 0;
       }
       h3 {
         margin: 1em 0 -0.5em 1.5em;
