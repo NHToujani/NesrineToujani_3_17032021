@@ -24,3 +24,6 @@ section{
     object-fit: cover;
   }
 }
+.btn {
+    @extend .presentation_btn;
+  }

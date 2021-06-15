@@ -1,75 +1,10 @@
-@import "./Base/typography";
-@import "./Utils/variable";
-@import "./Layout/footer";
-@import "./Layout/header";
-@import "./Base/base";
-@import "./Pages/localisation";
-@import "./Pages/presentation";
-@import "./Pages/fonctionnement";
-@import "./Pages/restaurant";
-@import "./Pages/menu";
-
-// Page des Menus
-.btn {
-  @extend .presentation_btn;
-}
-
-@media screen and (min-width: 1024px) {
-  body {
-    margin: 0px auto;
-  }
-  section {
-    align-content: space-between;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  
-  // header > i{
-  //     position: absolute;
-  //     margin: 20px 0 25px 20px;
-
-  // }
-  // header > div{
-  //     display: flex;
-  //     flex-direction: row
-  // }
- 
-  // header > i{
-  //     position: absolute;
-  //     margin: 20px 0 25px 20px;
-
-  // }
-  // header > div{
-  //     display: flex;
-  //     flex-direction: row;
-
-  // }
-  // ul{
-  //     list-style-type: none;
-  //     }
-  // section > img{
-  //     width: 100%;
-  //     height: 255px;
-  //     object-fit: cover;
-  // }
-}
-
-@media screen and (min-width: 1024px) {
-  // body{
-  //     font-family: '$font-text', sans-serif;
-  //     margin: 0px auto;
-  //     max-width: 1500px;
-  // }
-  // h1{
-  //     font-family :$font-title, sans-serif;
-  // }
-  // ul{
-  //     list-style-type: none;
-  //     }
-  // section > img{
-  //     width: 100%;
-  //     height: 255px;
-  //     object-fit: cover;
-  // }
-}
+@import "./base/typography";
+@import "./utils/variable";
+@import "./layout/footer";
+@import "./layout/header";
+@import "./base/base";
+@import "./pages/localisation";
+@import "./pages/presentation";
+@import "./pages/fonctionnement";
+@import "./pages/restaurant";
+@import "./pages/menu";
