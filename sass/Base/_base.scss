@@ -1,6 +1,15 @@
 body {
-    font-family: $font-text, sans-serif;
-    max-width: 1500px;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: $font-text;
+  max-width: 1500px;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: $font-title;
+}
+ul {
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}

@@ -1,20 +1,18 @@
 footer {
-    background-color: #353535;
-    padding: 15px 0;
-    h3 {
-      padding: 0 0 0 1.5em;
-      font-family: $font-title;
-      color: #ffffff;
+  background-color: $black;
+  padding: 15px 0;
+  h3 {
+    padding: 0 0 0 1.5em;
+    font-family: $font-title;
+    color: $white;
+  }
+  ul {
+    padding: 0 1.5em;
+    i {
+      color: $white;
     }
-    ul {
-      padding: 0 1.5em;
-      list-style-type: none;
-      i {
-        color: #ffffff;
-      }
-      a {
-        text-decoration: none;
-        color: #fff;
-      }
+    a {
+      color: $white;
     }
   }
+}
