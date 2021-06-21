@@ -1,9 +1,8 @@
 footer {
   background-color: $black;
-  padding: 15px 0;
-  h3 {
+  padding: 1px 0 15px 0;
+  .logo_texte {
     padding: 0 0 0 1.5em;
-    font-family: $font-title;
     color: $white;
   }
   ul {
@@ -13,6 +12,9 @@ footer {
     }
     a {
       color: $white;
+    }
+    li{
+      margin-bottom: 10px;
     }
   }
 }

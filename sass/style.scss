@@ -1,10 +1,18 @@
-@import "./base/typography";
-@import "./utils/variable";
-@import "./layout/footer";
-@import "./layout/header";
-@import "./base/base";
-@import "./pages/localisation";
-@import "./pages/presentation";
-@import "./pages/fonctionnement";
-@import "./pages/restaurant";
-@import "./pages/menu";
+// Order: utils, base, components, layout, pages
+@import "utils/mixins";
+@import "utils/variable";
+
+@import "base/base";
+@import "base/typography";
+
+@import "components/transition";
+
+@import "layout/footer";
+@import "layout/header";
+
+@import "pages/localisation";
+@import "pages/presentation";
+@import "pages/fonctionnement";
+@import "pages/restaurant";
+@import "pages/menu";
+@import "pages/icon";
