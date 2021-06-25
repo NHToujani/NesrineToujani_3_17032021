@@ -1,38 +1,54 @@
-.card_heart {
-    .empty:hover{
-        
+.card_heart--resto{
+    transition-property: opacity, animation;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    .empty{
+        position: absolute;
+        background: $white;
+        font-size: 24px;
+        z-index: 2;
+        color: black;
+        &:hover{        
             opacity: 0;
-        }        
-    .fill:hover{
-        opacity:1;
         }
+    }
+    .fill{
+        font-size: 24px;
+        position: absolute;
+        z-index: 1;
+        background: linear-gradient(139deg, #FF79DA 10%, #9356DC 95%);
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;        
+        &:hover{
+        opacity:1;
+        animation: jump 1s ease-in;
+        }
+    }
+    &.card_heart--menu{
+        animation-timing-function: ease-in;
+    }
 }
 .btn {
     background-color:linear-gradient(175deg, $secondry, 45%, $primary);
     transition: transform 330ms ease-in-out;
     &:hover{
+
         transform: scale(2);
     }
 }
-.fade-0{
-    animation-delay: 2s;
-    animation: fadein 1s;
-    
-}
-.fade-1{
-    animation-delay: 3s;
-    animation: fadein 2s;
-    animation: jump 3s;
+.fade-1{  
+    animation: fadein 1s, jump 1s;
+    transition-timing-function: ease-in-out;    
 }
 .fade-2{
-    animation-delay: 4s;
-    animation: fadein 3s;
-    animation: jump 4s;
+    animation: fadein 1.5s, jump 1.2s;
+    transition-timing-function: ease-in-out;    
+    
 }
-.fade-3{
-    animation-delay: 5s;
-    animation: fadein 4s;
-    animation: jump 5s;
+.fade-3{    
+    animation: fadein 2s, jump 1.5s;
+    transition-timing-function: ease-in-out;    
 }
             
 

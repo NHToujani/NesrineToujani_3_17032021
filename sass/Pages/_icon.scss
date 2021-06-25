@@ -1,41 +1,13 @@
 .restaurant_menu{
-    .card_heart{
-    font-size: 1.5rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    height: 100%;
-    .empty{
+    .card_heart--resto{
         position: absolute;
-        background: transparent;
-        font-size: 24px;
-        z-index: 2;
-        color: black;
-    }
-    .fill{
-        font-size: 24px;
-        position: absolute;
-        z-index: 1;
-        background: linear-gradient(139deg, #FF79DA 10%, #9356DC 95%);
-        -webkit-background-clip: text;
-                background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-  }
-}
-.menu_title{
-    .card_heart{
-        font-size: 1.5rem;
-        position: absolute;
-        right: 0;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20%;
-        height: 100%;
+        justify-content: flex-end;
+        right: 50px;
+        bottom: 50px;
+  }
+    &.card_heart--menu{
+        top: 40px;
+        width: 80%;
     }
 }
