@@ -31,3 +31,23 @@
     left: $left;
     transform: translate($x,$y);
 }
+@mixin btn-hover {
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+    background-blend-mode: lighten;
+    background-color: lighten($primary, 12%);
+}
+@mixin btn-gradient {
+    background: linear-gradient($secondary, $primary);
+}
+
+@mixin btn-shadow {
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+}
+
+@mixin box-shadow {
+    box-shadow:  0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+@mixin shadow-card {
+    box-shadow: 0 2px 19px -2px rgba(0, 0, 0, 0.30);
+}

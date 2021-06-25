@@ -1,0 +1,42 @@
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0.5rem);
+    }
+    75% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+// /* Firefox < 16 */
+// @-moz-keyframes fadein {
+//     from { opacity: 0; }
+//     to   { opacity: 1; }
+// }
+
+// /* Safari, Chrome and Opera > 12.1 */
+// @-webkit-keyframes fadein {
+//     from { opacity: 0; }
+//     to   { opacity: 1; }
+// }
+
+// /* Internet Explorer */
+// @-ms-keyframes fadein {
+//     from { opacity: 0; }
+//     to   { opacity: 1; }
+// }
+
+// /* Opera < 12.1 */
+// @-o-keyframes fadein {
+//     from { opacity: 0; }
+//     to   { opacity: 1; }
+// }

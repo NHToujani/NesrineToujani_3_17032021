@@ -1,34 +1,12 @@
-
 .card_heart {
-    .empty{
-        position: absolute;
-        background-color: transparent;
-        &:hover{
-            opacity: 0;
-        }
+    .empty:hover{
         
-    }
-    .fill{
-        height: 0;
-        opacity: 0;
-        transition: transform 10000ms ease-in-out ;
-        transition-delay: 20s;
-        &:hover{
-            opacity:1;
-            color: $primary;
+            opacity: 0;
+        }        
+    .fill:hover{
+        opacity:1;
         }
-    }
 }
-// .btn {
-//     background-color:linear-gradient(175deg, $secondry, 45%, $primary);
-//     transform: scale(1);
-//     transition: all 600ms;
-//     &:hover {
-//       background-color: linear-gradient(175deg, $secondry, 45%, $primary);
-//       transform: scale(1.2);
-
-//     }
-// }
 .btn {
     background-color:linear-gradient(175deg, $secondry, 45%, $primary);
     transition: transform 330ms ease-in-out;
@@ -36,3 +14,26 @@
         transform: scale(2);
     }
 }
+.fade-0{
+    animation-delay: 2s;
+    animation: fadein 1s;
+    
+}
+.fade-1{
+    animation-delay: 3s;
+    animation: fadein 2s;
+    animation: jump 3s;
+}
+.fade-2{
+    animation-delay: 4s;
+    animation: fadein 3s;
+    animation: jump 4s;
+}
+.fade-3{
+    animation-delay: 5s;
+    animation: fadein 4s;
+    animation: jump 5s;
+}
+            
+
+
