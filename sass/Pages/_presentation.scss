@@ -23,12 +23,16 @@
       padding: 15px 25px;
       font-size: 16px;
       text-decoration: none;
+      align-self: center;
       &:hover{
-        
-        background: lighten($color: $secondry, $amount: 1);
+        transform: translate(1);
+        background: linear-gradient(347deg, $primary 35%, $secondry 100%);
+        background-blend-mode: lighten;  
       }
       @include desktop{
         width: 20%;
+        align-self: center;
+        margin: 20px;
       }
     }
   }

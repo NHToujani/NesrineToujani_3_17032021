@@ -1,14 +1,33 @@
 .localisation {
     display: inline;
     flex-direction: row;
+    background-color: #eaeaea;
+    @include desktop{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
     &_element {
       font-size: 1em;
       font-weight: 500;
       color: #393939;
-      text-align: center;
-      background-color: #eaeaea;
+      text-align: center;      
       padding: 13px 0;
       box-shadow: inset 0 2.5px 3px $shadow;
+      @include desktop{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        i{
+          font-size: larger;    
+        }   
+        h2{
+          font-size: larger;
+          margin-left:15px;
+          }
+        
+      }
     }
     h1 {
       display: inline-block;

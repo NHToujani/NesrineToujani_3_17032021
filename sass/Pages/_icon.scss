@@ -5,6 +5,9 @@
         justify-content: flex-end;
         right: 50px;
         bottom: 50px;
+        @include desktop{
+            right: 35px;
+        }
   }
     &.card_heart--menu{
         top: 40px;

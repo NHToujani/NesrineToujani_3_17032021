@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  @include desktop{
+    margin: 0 auto;
+  }
 }
 *:focus {
   outline: none;

@@ -1,22 +1,23 @@
 header {
     display: flex;
     justify-content: center;
-    .logo_header {
-      width: 165px;
-      height: 30px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-      div {
-        img {
-          width: 335px;
-        }
+    @include desktop{
+      a{
+        margin: 0;
       }
+    }
+    .logo_header {
+        width: 165px;
+        height: 30px;        
+        @include desktop{
+            width: 40%;
+            height: 20%;
+        }
     }
 }
 @media screen and (min-width: 1024px) {
-  body {
-    margin: 0px auto;
-  }
+  
+  
   section {
     align-content: space-between;
   }

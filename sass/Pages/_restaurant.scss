@@ -3,17 +3,23 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 50px 0;    
+    padding: 50px 0;
+    @include desktop{
+      padding: 0 10px 50px 10px;
+    }
     h2 {
-        padding-left: 20px;
-        @include desktop {
-          text-align: center;
-        }
+      padding-left: 10px;
+      @include desktop{
+        font-size: 1.6em;
+        padding: 10px 20px;
+      }
+    }
+    p {
+      padding-left: 10px;
     }
     &_menu {
         background-color:$white;
         width: 90%;
-        align-self: center;
         border-radius: 15px;
         display: flex;
         align-self: center;
@@ -21,6 +27,7 @@
         margin: 10px 10px 20px 10px;
         box-shadow: 0 5px 10px $shadow;
         @include desktop {
+          display: block;
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-around;
@@ -46,23 +53,31 @@
           margin: 15px;
         }        
       }    
-    a {
-        border-radius: 15px 15px 0 0;
+      a {        
         img {
           height: 220px;
           width: 100%;
           object-fit: cover;
+          border-radius: 15px 15px 0 0;
         }
         @include desktop{
           height: 210px;
         }
       }
-      h3 {
-        margin: 1em 0 -0.5em 1.5em;
-        font-weight: 500;
+      h2 {
+        font-size: large;
       }
       p {
-        margin-left: 1em;
+        margin-left: 10px;
       }
+}
+.desktop_row{
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    h2{
+      text-align: left;
+    }
+  }
 }
   

@@ -7,6 +7,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include desktop{
+        flex-direction: row;
+        justify-content: space-around;
+      }
     }
     &_btn {
       width: 80%;
@@ -16,6 +20,17 @@
       box-shadow: 1px 2px 11px $shadow;
       margin: 0 0 30px 0;
       cursor: pointer;
+      &:hover{
+        color: black;
+        box-shadow: 3px 4px 15px $shadow;
+        background-color: #7d7d7d60;
+        .fas{
+          color: $primary;
+        }
+      }
+      @include desktop{
+        width: 25%;
+      }
       .btn__num {
         width: 23px;
         height: 23px;
@@ -32,6 +47,9 @@
       .fas {
         padding: 0 20px 0 30px;
         color: #7e7e7e;
+      }
+      &:hover{
+        color: #9356DC;
       }
       span {
         font-size: 15px;

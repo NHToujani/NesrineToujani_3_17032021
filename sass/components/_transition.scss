@@ -2,6 +2,7 @@
     transition-property: opacity, animation;
     animation-fill-mode: both;
     animation-delay: 1s;
+    cursor: pointer;
     .empty{
         position: absolute;
         background: $white;
@@ -23,6 +24,10 @@
         &:hover{
         opacity:1;
         animation: jump 1s ease-in;
+        animation-delay: 2s;
+        &:active{
+            opacity: 1;
+        }
         }
     }
     &.card_heart--menu{
