@@ -137,6 +137,11 @@ header {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 992px) {
+  header a {
+    margin: 0;
+  }
+}
 header .logo_header {
   width: 165px;
   height: 30px;
@@ -399,6 +404,11 @@ header .logo_header {
 .menu_content {
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 992px) {
+  .menu_content {
+    margin: -10px 90px 0;
+  }
+}
 .menu_content .menu_image img {
   width: 100%;
   height: 255px;
@@ -414,6 +424,15 @@ header .logo_header {
 .menu_content .menu_items .menu_title {
   display: flex;
   font-size: x-large;
+}
+@media screen and (min-width: 992px) {
+  .menu_content .menu_items .desktop_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .menu_content .menu_items .desktop_section_column {
+    margin: 0;
+  }
 }
 .menu_content .menu_items .designation {
   font-size: 19px;
@@ -478,6 +497,7 @@ header .logo_header {
 }
 
 .btn_order {
+  display: grid;
   text-align: center;
 }
 
