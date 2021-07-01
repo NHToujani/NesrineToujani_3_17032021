@@ -1,9 +1,17 @@
-* {
+.menu_content .menu_items .carte_menu .menu_descript, .restaurant_menu {
+  box-shadow: 0 2px 20px -2px #d5d5d5;
+}
+
+.presentation_explor--btn, .btn_order {
+  background: linear-gradient 347deg, #9356dc 35%, #ff79da 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
 }
 @media screen and (min-width: 992px) {
-  * {
+  body {
     margin: 0 auto;
   }
 }
@@ -41,6 +49,18 @@ body, html {
     opacity: 1;
   }
 }
+@keyframes retard {
+  from {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
 @keyframes jump {
   0% {
     transform: translateY(2em);
@@ -50,6 +70,14 @@ body, html {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 .card_heart--resto {
@@ -79,14 +107,9 @@ body, html {
 }
 .card_heart--resto .fill:hover {
   opacity: 1;
+  transition-delay: 3s;
   animation: jump 1s ease-in;
   animation-delay: 2s;
-}
-.card_heart--resto .fill:hover:active {
-  opacity: 1;
-}
-.card_heart--resto.card_heart--menu {
-  animation-timing-function: ease-in;
 }
 
 .btn {
@@ -97,8 +120,25 @@ body, html {
   transform: scale(2);
 }
 
+.fa-check-circle {
+  animation-name: spin;
+  animation-duration: 100ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
 .fade-1 {
-  animation: fadein 1s, jump 1s;
+  animation: fadein s, jump 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-1 {
+  animation: fadein s, jump 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-1 {
+  animation: fadein s, jump 1s;
   transition-timing-function: ease-in-out;
 }
 
@@ -109,6 +149,11 @@ body, html {
 
 .fade-3 {
   animation: fadein 2s, jump 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-4 {
+  animation: fadein 2.5s, jump 1.5s;
   transition-timing-function: ease-in-out;
 }
 
@@ -136,6 +181,7 @@ footer ul li {
 header {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 @media screen and (min-width: 992px) {
   header a {
@@ -148,64 +194,50 @@ header .logo_header {
 }
 @media screen and (min-width: 992px) {
   header .logo_header {
-    width: 40%;
-    height: 20%;
+    width: 50%;
+    height: 50%;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  section {
-    align-content: space-between;
-  }
-}
 .header_menu {
-  display: flex;
-  justify-content: flex-start;
   gap: 100px;
 }
 .header_menu i {
   position: absolute;
-  margin: 10px 30px 0;
+  margin: 15px 30px 0;
 }
 
 .localisation {
   display: inline;
   flex-direction: row;
-  background-color: #eaeaea;
 }
 @media screen and (min-width: 992px) {
   .localisation {
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: #eaeaea;
   }
 }
 .localisation_element {
   font-size: 1em;
   font-weight: 500;
-  color: #393939;
   text-align: center;
   padding: 13px 0;
-  box-shadow: inset 0 2.5px 3px #d5d5d5;
 }
 @media screen and (min-width: 992px) {
-  .localisation_element {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-  }
   .localisation_element i {
     font-size: larger;
   }
-  .localisation_element h2 {
-    font-size: larger;
-    margin-left: 15px;
-  }
 }
-.localisation h1 {
+.localisation h2 {
   display: inline-block;
   font-size: 1em;
+}
+@media screen and (min-width: 992px) {
+  .localisation h2 {
+    font-size: larger;
+  }
 }
 
 .presentation {
@@ -219,13 +251,16 @@ header .logo_header {
   margin-bottom: 0;
   color: #353535;
   padding: 0 20px;
+  margin-block-start: unset;
 }
 .presentation_text {
   color: #969696;
 }
-.presentation_btn, .btn_order {
+.presentation_explor {
+  margin: 20px;
+}
+.presentation_explor--btn, .btn_order {
   background: #9356dc;
-  background: linear-gradient(347deg, #9356dc 35%, #ff79da 100%);
   opacity: 1;
   border-radius: 25px;
   box-shadow: -4px 5px 5px #d5d5d5;
@@ -236,13 +271,13 @@ header .logo_header {
   text-decoration: none;
   align-self: center;
 }
-.presentation_btn:hover, .btn_order:hover {
-  transform: translate(1);
+.presentation_explor--btn:hover, .btn_order:hover {
+  transform: scaleY(1);
   background: linear-gradient(347deg, #9356dc 35%, #ff79da 100%);
-  background-blend-mode: lighten;
+  lighting-color: lighten;
 }
 @media screen and (min-width: 992px) {
-  .presentation_btn, .btn_order {
+  .presentation_explor {
     width: 20%;
     align-self: center;
     margin: 20px;
@@ -298,6 +333,7 @@ header .logo_header {
   top: 23px;
   line-height: 25px;
   position: relative;
+  margin: 0;
 }
 .fonctionnement_btn .fas {
   padding: 0 20px 0 30px;
@@ -343,7 +379,6 @@ header .logo_header {
   align-self: center;
   position: relative;
   margin: 10px 10px 20px 10px;
-  box-shadow: 0 5px 10px #d5d5d5;
 }
 @media screen and (min-width: 992px) {
   .restaurant_menu {
@@ -415,7 +450,7 @@ header .logo_header {
   object-fit: cover;
 }
 .menu_content .menu_items {
-  padding: 30px 20px;
+  padding: 10px;
   position: sticky;
   background-color: #f6f6f6;
   border-radius: 50px 50px 0 0;
@@ -423,11 +458,18 @@ header .logo_header {
 }
 .menu_content .menu_items .menu_title {
   display: flex;
-  font-size: x-large;
+  font-size: large;
+  justify-content: space-around;
+  line-height: 25px;
+}
+.menu_content .menu_items .menu_title h1 {
+  margin: unset;
+}
+.menu_content .menu_items .desktop_section {
+  display: grid;
 }
 @media screen and (min-width: 992px) {
   .menu_content .menu_items .desktop_section {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
   .menu_content .menu_items .desktop_section_column {
@@ -439,61 +481,85 @@ header .logo_header {
   font-weight: 400;
   margin: 20px 0;
 }
-.menu_content .menu_items .designation:after {
-  background: none repeat scroll 0 0 #99e2d0;
-  bottom: -6px;
+.menu_content .menu_items .designation::after {
   content: "";
+  border: 1px solid #99e2d0;
+  background-color: #99e2d0;
+  bottom: -3px;
   display: block;
-  height: 3px;
-  width: 45px;
+  height: 1px;
+  width: 48px;
   position: relative;
 }
+.menu_content .menu_items .carte_menu {
+  padding: 0;
+}
 .menu_content .menu_items .carte_menu .menu_descript {
+  display: flex;
+  width: 100%;
+  height: 60px;
   background-color: #ffffff;
   border-radius: 15px;
-  margin: 10px;
-  box-shadow: 0 2px 19px -2px #d5d5d5;
+  margin: 5px 60px 5px 0;
   position: relative;
   cursor: pointer;
-  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 .menu_content .menu_items .carte_menu .menu_descript:hover .btn_circle {
   transform: translateX(0px);
 }
-.menu_content .menu_items .carte_menu .menu_descript .meal {
-  margin: 5px 10px;
+.menu_content .menu_items .carte_menu .menu_descript .meal_detail {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
+}
+.menu_content .menu_items .carte_menu .menu_descript .meal_detail--name {
   font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+  padding-bottom: 5px;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_content .menu_items .carte_menu .menu_descript .meal_detail {
-  font-size: 15px;
-  margin-bottom: 5px;
+.menu_content .menu_items .carte_menu .menu_descript .meal_detail--accompagn {
+  margin: 0;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu_content .menu_items .carte_menu .menu_descript .btn_price {
-  float: right;
-  transition: transform 250ms;
-  transform: translateX(-60px);
+  display: flex;
+  font-weight: 700;
+  padding: 0 30px 0 5px;
+  flex-direction: row;
+  align-items: flex-end;
+  line-height: 35px;
+  justify-content: flex-end;
 }
 .menu_content .menu_items .carte_menu .menu_descript .btn_circle {
   position: absolute;
   right: 0;
   top: 0;
   transition: transform 250ms;
-  transform: translateX(60px);
+  transform: translateX(66px);
   display: block;
   font-size: 1.1em;
   color: #ffffff;
   text-align: center;
   height: 40px;
   padding: 10px 0;
+  margin: 0 0 0 50px;
   width: 55px;
   line-height: 40px;
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+.menu_content .menu_items .carte_menu .menu_descript .fa-check-circle {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
 .btn_order {
@@ -516,6 +582,13 @@ header .logo_header {
 .restaurant_menu.card_heart--menu {
   top: 40px;
   width: 80%;
+}
+
+.fa-check-circle {
+  transform-origin: center;
+}
+.fa-check-circle:hover {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */

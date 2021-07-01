@@ -20,4 +20,36 @@
         @content;
     }
 }
-
+@mixin line($color:$tertiary, $size: 1px) {
+    &::after{
+        content: "";
+        border: $size solid $color;
+        background-color: $color;
+        bottom: $size * -3;
+        display: block;
+        height: $size;
+        width: $size * 48;
+        position: relative;
+      }
+  }
+%shadow{
+    box-shadow: 0 2px 20px -2px #d5d5d5;
+}
+%background {
+    background:linear-gradient (347deg, #9356dc 35%, #ff79da 100%);
+}
+@mixin prix{
+    transition: transform 250ms;
+    transform: translateX(-60px);
+}
+@mixin button{
+    @if (menu_descript:hover) {
+        .fa-check-circle{
+            animation-name: spin;
+            animation-duration: 1000ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+              
+    }
+}

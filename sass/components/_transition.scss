@@ -11,7 +11,7 @@
         color: black;
         &:hover{        
             opacity: 0;
-        }
+        }        
     }
     .fill{
         font-size: 24px;
@@ -23,29 +23,32 @@
         -webkit-text-fill-color: transparent;        
         &:hover{
         opacity:1;
+        transition-delay: 3s;
         animation: jump 1s ease-in;
         animation-delay: 2s;
-        &:active{
-            opacity: 1;
         }
-        }
-    }
-    &.card_heart--menu{
-        animation-timing-function: ease-in;
     }
 }
 .btn {
     background-color:linear-gradient(175deg, $secondry, 45%, $primary);
     transition: transform 330ms ease-in-out;
     &:hover{
-
         transform: scale(2);
     }
 }
-.fade-1{  
-    animation: fadein 1s, jump 1s;
+.fa-check-circle{
+    animation-name: spin;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@for $i from 1 to 4 {
+    .fade-1{  
+    animation: fadein s, jump 1s;
     transition-timing-function: ease-in-out;    
 }
+}
+
 .fade-2{
     animation: fadein 1.5s, jump 1.2s;
     transition-timing-function: ease-in-out;    
@@ -55,6 +58,9 @@
     animation: fadein 2s, jump 1.5s;
     transition-timing-function: ease-in-out;    
 }
-            
+.fade-4{    
+    animation: fadein 2.5s, jump 1.5s;
+    transition-timing-function: ease-in-out;    
+}          
 
 

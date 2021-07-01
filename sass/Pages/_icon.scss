@@ -14,3 +14,10 @@
         width: 80%;
     }
 }
+.fa-check-circle{
+    transform-origin: center;
+    &:hover{
+        transform: rotate(180deg)
+    }
+    
+}

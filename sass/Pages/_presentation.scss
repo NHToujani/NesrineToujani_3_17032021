@@ -8,31 +8,36 @@
       margin-bottom: 0;
       color: $black;
       padding: 0 20px;
+      margin-block-start: unset;
     }
     &_text {
       color: #969696;
     }
-    &_btn {
-      background: $primary;
-      background: linear-gradient(347deg, $primary 35%, $secondry 100%);
-      opacity: 1;
-      border-radius: 25px;
-      box-shadow: -4px 5px 5px $shadow;
-      color: $white;
-      border: none;
-      padding: 15px 25px;
-      font-size: 16px;
-      text-decoration: none;
-      align-self: center;
-      &:hover{
-        transform: translate(1);
-        background: linear-gradient(347deg, $primary 35%, $secondry 100%);
-        background-blend-mode: lighten;  
-      }
-      @include desktop{
-        width: 20%;
+    &_explor{
+      margin: 20px;
+      &--btn {
+        background: $primary;
+        opacity: 1;
+        border-radius: 25px;
+        box-shadow: -4px 5px 5px $shadow;
+        color: $white;
+        border: none;
+        padding: 15px 25px;
+        font-size: 16px;
+        text-decoration: none;
         align-self: center;
-        margin: 20px;
+        @extend %background;
+
+        &:hover{
+          transform: scaleY(1);
+          background: linear-gradient(347deg, $primary 35%, $secondry 100%);
+          lighting-color: lighten;  
+        }
       }
+        @include desktop{
+          width: 20%;
+          align-self: center;
+          margin: 20px;
+        }
     }
-  }
+}
