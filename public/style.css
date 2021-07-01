@@ -180,8 +180,9 @@ footer ul li {
 
 header {
   display: flex;
-  justify-content: center;
-  padding: 10px;
+  padding: 10px 0;
+  align-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 992px) {
   header a {
@@ -200,11 +201,15 @@ header .logo_header {
 }
 
 .header_menu {
-  gap: 100px;
+  gap: 50px;
 }
 .header_menu i {
-  position: absolute;
   margin: 15px 30px 0;
+}
+@media screen and (min-width: 992px) {
+  .header_menu {
+    gap: 160px;
+  }
 }
 
 .localisation {
@@ -446,7 +451,8 @@ header .logo_header {
 }
 .menu_content .menu_image img {
   width: 100%;
-  height: 255px;
+  max-height: 400px;
+  margin-bottom: -30px;
   object-fit: cover;
 }
 .menu_content .menu_items {
@@ -507,6 +513,9 @@ header .logo_header {
 }
 .menu_content .menu_items .carte_menu .menu_descript:hover .btn_circle {
   transform: translateX(0px);
+}
+.menu_content .menu_items .carte_menu .menu_descript:hover .btn_circle.fa-check-circle {
+  animation: spin;
 }
 .menu_content .menu_items .carte_menu .menu_descript .meal_detail {
   flex: 1;

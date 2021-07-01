@@ -6,7 +6,8 @@
   .menu_image {
     img {
       width: 100%;
-      height: 255px;
+      max-height: 400px;
+      margin-bottom: -30px;
       object-fit: cover;
     }
   }
@@ -56,6 +57,9 @@
         &:hover{
           .btn_circle{
             transform: translateX(0px);
+            &.fa-check-circle{
+            animation: spin;
+            }
           }
         }
         .meal_detail{
