@@ -5,13 +5,14 @@
     cursor: pointer;
     .empty{
         position: absolute;
-        background: $white;
         font-size: 24px;
         z-index: 2;
         color: black;
+        
         &:hover{        
             opacity: 0;
-        }        
+        }
+        @include background;       
     }
     .fill{
         font-size: 24px;
@@ -29,6 +30,27 @@
         }
     }
 }
+.menu_descript{  
+        .btn_circle{
+            transition: transform 250ms;
+            transform: translateX(66px);
+        }  
+        .btn_price{ 
+            transition: transform 250ms;
+            transform: translateX(0px);       
+           
+        }
+     &:hover{
+         .btn_circle{
+            transition: transform 250ms;
+            transform: translateX(0);
+            }
+         .btn_price{
+            transition: transform 250ms;
+            transform: translateX(-40px);
+            }   
+        }
+}
 .btn {
     background-color:linear-gradient(175deg, $secondry, 45%, $primary);
     transition: transform 330ms ease-in-out;
@@ -44,9 +66,9 @@
 }
 @for $i from 1 to 4 {
     .fade-1{  
-    animation: fadein s, jump 1s;
+    animation: fadein #{$i*0.5s}, jump #{$i*1s};
     transition-timing-function: ease-in-out;    
-}
+    }
 }
 
 .fade-2{

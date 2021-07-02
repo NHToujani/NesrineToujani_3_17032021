@@ -16,7 +16,7 @@
     &_explor{
       margin: 20px;
       &--btn {
-        background: $primary;
+        background: linear-gradient(347deg, $primary 35%, $secondry 100%);
         opacity: 1;
         border-radius: 25px;
         box-shadow: -4px 5px 5px $shadow;

@@ -63,13 +63,29 @@ body, html {
 }
 @keyframes jump {
   0% {
-    transform: translateY(2em);
+    transform: translateY(1.5em);
   }
   50% {
     transform: translateY(1em);
   }
   100% {
     transform: translateY(0);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(180deg);
+  }
+  to {
+    -moz-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
   }
 }
 @keyframes spin {
@@ -88,13 +104,15 @@ body, html {
 }
 .card_heart--resto .empty {
   position: absolute;
-  background: #ffffff;
   font-size: 24px;
   z-index: 2;
   color: black;
 }
 .card_heart--resto .empty:hover {
   opacity: 0;
+}
+.card_heart--resto .empty .empty {
+  background: #f6f6f6;
 }
 .card_heart--resto .fill {
   font-size: 24px;
@@ -110,6 +128,23 @@ body, html {
   transition-delay: 3s;
   animation: jump 1s ease-in;
   animation-delay: 2s;
+}
+
+.menu_descript .btn_circle {
+  transition: transform 250ms;
+  transform: translateX(66px);
+}
+.menu_descript .btn_price {
+  transition: transform 250ms;
+  transform: translateX(0px);
+}
+.menu_descript:hover .btn_circle {
+  transition: transform 250ms;
+  transform: translateX(0);
+}
+.menu_descript:hover .btn_price {
+  transition: transform 250ms;
+  transform: translateX(-40px);
 }
 
 .btn {
@@ -128,17 +163,17 @@ body, html {
 }
 
 .fade-1 {
-  animation: fadein s, jump 1s;
+  animation: fadein 0.5s, jump 1s;
   transition-timing-function: ease-in-out;
 }
 
 .fade-1 {
-  animation: fadein s, jump 1s;
+  animation: fadein 1s, jump 2s;
   transition-timing-function: ease-in-out;
 }
 
 .fade-1 {
-  animation: fadein s, jump 1s;
+  animation: fadein 1.5s, jump 3s;
   transition-timing-function: ease-in-out;
 }
 
@@ -265,7 +300,7 @@ header .logo_header {
   margin: 20px;
 }
 .presentation_explor--btn, .btn_order {
-  background: #9356dc;
+  background: linear-gradient(347deg, #9356dc 35%, #ff79da 100%);
   opacity: 1;
   border-radius: 25px;
   box-shadow: -4px 5px 5px #d5d5d5;
@@ -511,12 +546,6 @@ header .logo_header {
   cursor: pointer;
   text-overflow: ellipsis;
 }
-.menu_content .menu_items .carte_menu .menu_descript:hover .btn_circle {
-  transform: translateX(0px);
-}
-.menu_content .menu_items .carte_menu .menu_descript:hover .btn_circle.fa-check-circle {
-  animation: spin;
-}
 .menu_content .menu_items .carte_menu .menu_descript .meal_detail {
   flex: 1;
   overflow: hidden;
@@ -549,8 +578,6 @@ header .logo_header {
   position: absolute;
   right: 0;
   top: 0;
-  transition: transform 250ms;
-  transform: translateX(66px);
   display: block;
   font-size: 1.1em;
   color: #ffffff;
@@ -580,7 +607,7 @@ header .logo_header {
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  right: 50px;
+  right: 60px;
   bottom: 50px;
 }
 @media screen and (min-width: 992px) {
@@ -588,16 +615,12 @@ header .logo_header {
     right: 35px;
   }
 }
-.restaurant_menu.card_heart--menu {
-  top: 40px;
-  width: 80%;
-}
 
 .fa-check-circle {
   transform-origin: center;
 }
 .fa-check-circle:hover {
-  transform: rotate(180deg);
+  animation: spin;
 }
 
 /*# sourceMappingURL=style.css.map */

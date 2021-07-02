@@ -3,21 +3,17 @@
         position: absolute;
         display: flex;
         justify-content: flex-end;
-        right: 50px;
+        right: 60px;
         bottom: 50px;
         @include desktop{
             right: 35px;
         }
   }
-    &.card_heart--menu{
-        top: 40px;
-        width: 80%;
-    }
 }
 .fa-check-circle{
     transform-origin: center;
     &:hover{
-        transform: rotate(180deg)
+        animation: spin;
     }
     
 }

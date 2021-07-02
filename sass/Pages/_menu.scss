@@ -54,14 +54,6 @@
         cursor: pointer;
         text-overflow: ellipsis;
         @extend %shadow;
-        &:hover{
-          .btn_circle{
-            transform: translateX(0px);
-            &.fa-check-circle{
-            animation: spin;
-            }
-          }
-        }
         .meal_detail{
             flex: 1;
             overflow: hidden;
@@ -94,8 +86,6 @@
           position: absolute;
           right: 0;
           top: 0;
-          transition: transform 250ms;
-          transform: translateX(66px);
           display: block;
           font-size: 1.1em;
           color: #ffffff;

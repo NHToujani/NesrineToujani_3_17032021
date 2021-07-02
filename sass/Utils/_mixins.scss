@@ -53,3 +53,16 @@
               
     }
 }
+@mixin background {
+    @if background #f6f6f6 {
+        .empty{
+        background: #f6f6f6; 
+        }       
+    }
+    @else {
+        .empty{
+        background: #ffffff;
+        }
+    }
+    
+}
