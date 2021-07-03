@@ -1,8 +1,5 @@
 .restaurant {
     background-color: $background;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     padding: 50px 0;
     @include desktop{
       padding: 0 10px 50px 10px;
@@ -55,7 +52,7 @@
       }    
       a {        
         img {
-          height: 220px;
+          height: 170px;
           width: 100%;
           object-fit: cover;
           border-radius: 15px 15px 0 0;

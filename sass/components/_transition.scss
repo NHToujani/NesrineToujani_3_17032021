@@ -1,14 +1,12 @@
 .card_heart--resto{
-    transition-property: opacity, animation;
-    animation-fill-mode: both;
-    animation-delay: 1s;
+    
     cursor: pointer;
     .empty{
         position: absolute;
         font-size: 24px;
         z-index: 2;
         color: black;
-        
+        background: $white;
         &:hover{        
             opacity: 0;
         }
@@ -23,31 +21,38 @@
                 background-clip: text;
         -webkit-text-fill-color: transparent;        
         &:hover{
-        opacity:1;
-        transition-delay: 3s;
-        animation: jump 1s ease-in;
-        animation-delay: 2s;
+            transition-property: opacity, animation;
+            animation-fill-mode: both;
+            animation-delay: 1s;
+            opacity:1;
+            animation: retard ;
         }
     }
 }
 .menu_descript{  
         .btn_circle{
-            transition: transform 250ms;
+            transition: transform 1000ms;
             transform: translateX(66px);
         }  
         .btn_price{ 
-            transition: transform 250ms;
+            transition: transform 1000ms;
             transform: translateX(0px);       
            
         }
      &:hover{
          .btn_circle{
-            transition: transform 250ms;
+            transition: transform 1000ms;
             transform: translateX(0);
             }
          .btn_price{
-            transition: transform 250ms;
+            transition: transform 1000ms;
             transform: translateX(-40px);
+            }
+        .fa-check-circle{
+            animation-name: spin;
+            animation-duration: 2000ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
             }   
         }
 }
@@ -58,31 +63,14 @@
         transform: scale(2);
     }
 }
-.fa-check-circle{
-    animation-name: spin;
-    animation-duration: 100ms;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-}
+
 @for $i from 1 to 4 {
-    .fade-1{  
+    .fade-#{$i}{  
     animation: fadein #{$i*0.5s}, jump #{$i*1s};
     transition-timing-function: ease-in-out;    
     }
 }
 
-.fade-2{
-    animation: fadein 1.5s, jump 1.2s;
-    transition-timing-function: ease-in-out;    
-    
-}
-.fade-3{    
-    animation: fadein 2s, jump 1.5s;
-    transition-timing-function: ease-in-out;    
-}
-.fade-4{    
-    animation: fadein 2.5s, jump 1.5s;
-    transition-timing-function: ease-in-out;    
-}          
+         
 
 

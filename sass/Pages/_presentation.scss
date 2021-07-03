@@ -16,22 +16,24 @@
     &_explor{
       margin: 20px;
       &--btn {
-        background: linear-gradient(347deg, $primary 35%, $secondry 100%);
-        opacity: 1;
-        border-radius: 25px;
-        box-shadow: -4px 5px 5px $shadow;
-        color: $white;
-        border: none;
-        padding: 15px 25px;
-        font-size: 16px;
-        text-decoration: none;
-        align-self: center;
-        @extend %background;
-
-        &:hover{
-          transform: scaleY(1);
-          background: linear-gradient(347deg, $primary 35%, $secondry 100%);
-          lighting-color: lighten;  
+        // background: linear-gradient(347deg, $primary 35%, $secondry 100%);
+        width: 200px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50px;
+        background-color: #9356DC;
+        background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+        box-shadow: 3px 5px 7px #d5d5d5;
+        position: relative;
+        z-index: 1;
+        margin: 20px auto 40px auto;
+        padding: 15px;
+        &::after{
+          
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 400ms;
         }
       }
         @include desktop{
