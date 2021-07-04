@@ -1,19 +1,17 @@
 .restaurant {
     background-color: $background;
-    padding: 50px 0;
+    padding: 50px 0 50px 20px;
     @include desktop{
       padding: 0 10px 50px 10px;
     }
     h2 {
-      padding-left: 10px;
+      
       @include desktop{
         font-size: 1.6em;
-        padding: 10px 20px;
+        padding: 10px;
       }
     }
-    p {
-      padding-left: 10px;
-    }
+    
     &_menu {
         background-color:$white;
         width: 90%;
@@ -47,7 +45,7 @@
         }
         .card_description{
           position: relative;
-          margin: 15px;
+          margin: 10px;
         }        
       }    
       a {        
@@ -62,7 +60,8 @@
         }
       }
       h2 {
-        font-size: large;
+        font-size: x-large;
+        margin-left: inherit;
       }
       p {
         margin-left: 10px;
@@ -71,7 +70,7 @@
 .desktop_row{
   @include desktop {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
     h2{
       text-align: left;
     }

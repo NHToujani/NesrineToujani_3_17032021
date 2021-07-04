@@ -21,11 +21,9 @@
                 background-clip: text;
         -webkit-text-fill-color: transparent;        
         &:hover{
-            transition-property: opacity, animation;
-            animation-fill-mode: both;
-            animation-delay: 1s;
-            opacity:1;
-            animation: retard ;
+            transform: scale(1);
+            transition: transform 500ms ease-in-out;
+            transform-origin: bottom center;
         }
     }
 }
@@ -36,9 +34,11 @@
         }  
         .btn_price{ 
             transition: transform 1000ms;
-            transform: translateX(0px);       
-           
+            transform: translateX(0px);             
         }
+        .fa-check-circle{
+            transform: rotate(0deg);
+        } 
      &:hover{
          .btn_circle{
             transition: transform 1000ms;
@@ -49,18 +49,16 @@
             transform: translateX(-40px);
             }
         .fa-check-circle{
-            animation-name: spin;
-            animation-duration: 2000ms;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
+            transform: rotate(360deg);
             }   
         }
 }
 .btn {
     background-color:linear-gradient(175deg, $secondry, 45%, $primary);
     transition: transform 330ms ease-in-out;
+    transform: scale(0);
     &:hover{
-        transform: scale(2);
+        transform: scale(1);
     }
 }
 

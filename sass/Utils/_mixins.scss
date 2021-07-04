@@ -66,8 +66,14 @@
     }
     
 }
-@mixin ellipse {
+@mixin ellipsis{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+@for $i from 1 to 4 {
+    .fade-#{$i}{  
+    animation: fadein #{$i*0.5s}, jump #{$i*1s};
+    transition-timing-function: ease-in-out;    
+    }
 }

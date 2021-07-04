@@ -2,6 +2,21 @@
   box-shadow: 0 2px 20px -2px #d5d5d5;
 }
 
+.fade-1 {
+  animation: fadein 0.5s, jump 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-2 {
+  animation: fadein 1s, jump 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-3 {
+  animation: fadein 1.5s, jump 3s;
+  transition-timing-function: ease-in-out;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -78,26 +93,6 @@ body, html {
     transform: translateY(0);
   }
 }
-@keyframes heart-beat {
-  0% {
-    transform: scale(0.95);
-  }
-  5% {
-    transform: scale(1.1);
-  }
-  39% {
-    transform: scale(0.85);
-  }
-  45% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
 @-moz-keyframes spin {
   from {
     -moz-transform: rotate(360deg);
@@ -148,11 +143,9 @@ body, html {
   -webkit-text-fill-color: transparent;
 }
 .card_heart--resto .fill:hover {
-  transition-property: opacity, animation;
-  animation-fill-mode: both;
-  animation-delay: 1s;
-  opacity: 1;
-  animation: retard;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
+  transform-origin: bottom center;
 }
 
 .menu_descript .btn_circle {
@@ -163,6 +156,9 @@ body, html {
   transition: transform 1000ms;
   transform: translateX(0px);
 }
+.menu_descript .fa-check-circle {
+  transform: rotate(0deg);
+}
 .menu_descript:hover .btn_circle {
   transition: transform 1000ms;
   transform: translateX(0);
@@ -172,18 +168,16 @@ body, html {
   transform: translateX(-40px);
 }
 .menu_descript:hover .fa-check-circle {
-  animation-name: spin;
-  animation-duration: 2000ms;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
+  transform: rotate(360deg);
 }
 
 .btn {
   background-color: linear-gradient(175deg, #ff79da, 45%, #9356dc);
   transition: transform 330ms ease-in-out;
+  transform: scale(0);
 }
 .btn:hover {
-  transform: scale(2);
+  transform: scale(1);
 }
 
 .fade-1 {
@@ -313,20 +307,19 @@ header .logo_header {
   width: 200px;
   text-align: center;
   height: 50px;
-  line-height: 50px;
+  color: #ffffff;
   border-radius: 50px;
-  background-color: #9356DC;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 3px 5px 7px #d5d5d5;
   position: relative;
   z-index: 1;
+  white-space: pre;
   margin: 20px auto 40px auto;
   padding: 15px;
 }
-.presentation_explor--btn::after, .btn_order::after {
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 400ms;
+.presentation_explor--btn:hover, .btn_order:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6), inset -1px -1px 2px #9356dc;
+  background: linear-gradient(175deg, lighten #ff79da, 4% 0%, lighten #9356dc, 1% 100%);
 }
 @media screen and (min-width: 992px) {
   .presentation_explor {
@@ -401,24 +394,18 @@ header .logo_header {
 
 .restaurant {
   background-color: #f6f6f6;
-  padding: 50px 0;
+  padding: 50px 0 50px 20px;
 }
 @media screen and (min-width: 992px) {
   .restaurant {
     padding: 0 10px 50px 10px;
   }
 }
-.restaurant h2 {
-  padding-left: 10px;
-}
 @media screen and (min-width: 992px) {
   .restaurant h2 {
     font-size: 1.6em;
-    padding: 10px 20px;
+    padding: 10px;
   }
-}
-.restaurant p {
-  padding-left: 10px;
 }
 .restaurant_menu {
   background-color: #ffffff;
@@ -455,7 +442,7 @@ header .logo_header {
 }
 .restaurant_menu .card_description {
   position: relative;
-  margin: 15px;
+  margin: 10px;
 }
 .restaurant a img {
   height: 170px;
@@ -469,7 +456,8 @@ header .logo_header {
   }
 }
 .restaurant h2 {
-  font-size: large;
+  font-size: x-large;
+  margin-left: inherit;
 }
 .restaurant p {
   margin-left: 10px;
@@ -478,7 +466,7 @@ header .logo_header {
 @media screen and (min-width: 992px) {
   .desktop_row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
   }
   .desktop_row h2 {
     text-align: left;
@@ -521,7 +509,10 @@ header .logo_header {
 }
 @media screen and (min-width: 992px) {
   .menu_content .menu_items .desktop_section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 34%);
+  }
+  .menu_content .menu_items .desktop_section .desktop_column {
+    width: 95%;
   }
 }
 .menu_content .menu_items .desktop_section .designation {
@@ -548,13 +539,16 @@ header .logo_header {
   margin: 15px 60px 5px 0;
   position: relative;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail {
   flex: 1;
+  padding: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 5px;
+  white-space: nowrap;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail--name {
   font-size: 18px;
@@ -562,10 +556,12 @@ header .logo_header {
   padding-bottom: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail--accompagn {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .btn_price {
   display: flex;
@@ -602,6 +598,8 @@ header .logo_header {
 
 .btn_order {
   display: grid;
+  font-size: large;
+  white-space: pre;
   text-align: center;
 }
 
@@ -609,7 +607,7 @@ header .logo_header {
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  right: 60px;
+  right: 35px;
   bottom: 50px;
 }
 @media screen and (min-width: 992px) {

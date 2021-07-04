@@ -30,7 +30,10 @@
     .desktop_section{
       display: grid;
       @include desktop{
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(3, 34%);
+          .desktop_column{
+            width: 95%;
+          }
     }
     .designation{
       font-size: 19px;
@@ -48,23 +51,23 @@
         margin: 15px 60px 5px 0;
         position: relative;
         cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
         @extend %shadow;
         .meal_detail{
             flex: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
             padding: 5px;
+            @include ellipsis;
             &--name{            
               font-size: 18px;
               font-weight: 900;
               padding-bottom: 5px;
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
             }
             &--accompagn{
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
+
             }
         }
         .btn_price{
@@ -103,5 +106,7 @@
 .btn_order{
   display: grid;
   @extend .presentation_explor--btn;
+  font-size: large;
+  white-space: pre;
   text-align: center;
 }
