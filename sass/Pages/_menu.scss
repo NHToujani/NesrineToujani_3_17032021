@@ -44,17 +44,18 @@
     .carte_menu{
       .menu_descript{
         display: flex;
-        width: 100%;
+        width: 80%;
         height: 60px;
         background-color: $white;
         border-radius: 15px;
         margin: 15px 60px 5px 0;
         position: relative;
         cursor: pointer;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @include ellipsis;
         @extend %shadow;
+        @include desktop{
+          width: 98%;
+        }
         .meal_detail{
             flex: 1;
             padding: 5px;
@@ -63,11 +64,9 @@
               font-size: 18px;
               font-weight: 900;
               padding-bottom: 5px;
-              @include ellipsis;
             }
             &--accompagn{
-              @include ellipsis;
-
+              margin-left: 5px;
             }
         }
         .btn_price{

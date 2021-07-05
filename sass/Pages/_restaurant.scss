@@ -5,9 +5,8 @@
       padding: 0 10px 50px 10px;
     }
     h2 {
-      
+      font-size: 20px;
       @include desktop{
-        font-size: 1.6em;
         padding: 10px;
       }
     }
@@ -59,12 +58,10 @@
           height: 210px;
         }
       }
-      h2 {
-        font-size: x-large;
-        margin-left: inherit;
-      }
       p {
-        margin-left: 10px;
+        @include desktop{
+          margin-left: 10px;
+        }
       }
 }
 .desktop_row{
