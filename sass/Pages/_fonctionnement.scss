@@ -23,7 +23,7 @@
       &:hover{
         color: black;
         box-shadow: 3px 4px 15px $shadow;
-        background-color: #7d7d7d60;
+        background-color: #f5edff;
         .fas{
           color: $primary;
         }
@@ -48,9 +48,6 @@
       .fas {
         padding: 0 20px 0 30px;
         color: #7e7e7e;
-      }
-      &:hover{
-        color: #9356DC;
       }
       span {
         font-size: 15px;

@@ -138,14 +138,10 @@ body, html {
   position: absolute;
   z-index: 1;
   background: linear-gradient(139deg, #FF79DA 10%, #9356DC 95%);
-  background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: content-box;
+  -webkit-background-clip: content-box;
   color: transparent;
-}
-.card_heart--resto .fill:hover {
-  transform: scale(1);
-  transition: transform 500ms ease-in-out;
-  transform-origin: bottom center;
+  transition: background 0.5s ease;
 }
 
 .menu_descript .btn_circle {
@@ -156,10 +152,6 @@ body, html {
   transition: transform 1000ms;
   transform: translateX(0px);
 }
-.menu_descript .fa-check-circle {
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transform: rotate(0deg);
-}
 .menu_descript:hover .btn_circle {
   transition: transform 1000ms;
   transform: translateX(0);
@@ -168,14 +160,12 @@ body, html {
   transition: transform 1000ms;
   transform: translateX(-40px);
 }
-.menu_descript:hover .meal_detail {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.menu_descript:hover .fa-check-circle {
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+.menu_descript:hover .btn_circle--check {
+  transition: transform 1000ms ease-in-out;
   transform: rotate(360deg);
+}
+.menu_descript:hover .meal_detail {
+  padding-right: 30px !important;
 }
 
 .btn {
@@ -363,7 +353,7 @@ header .logo_header {
 .fonctionnement_btn:hover {
   color: black;
   box-shadow: 3px 4px 15px #d5d5d5;
-  background-color: #7d7d7d60;
+  background-color: #f5edff;
 }
 .fonctionnement_btn:hover .fas {
   color: #9356dc;
@@ -390,9 +380,6 @@ header .logo_header {
 .fonctionnement_btn .fas {
   padding: 0 20px 0 30px;
   color: #7e7e7e;
-}
-.fonctionnement_btn:hover {
-  color: #9356DC;
 }
 .fonctionnement_btn span {
   font-size: 15px;
@@ -470,6 +457,12 @@ header .logo_header {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .desktop_row {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+}
 @media screen and (min-width: 992px) {
   .desktop_row {
     display: grid;
@@ -482,11 +475,6 @@ header .logo_header {
 
 .menu_content {
   background-color: #f6f6f6;
-}
-@media screen and (min-width: 992px) {
-  .menu_content {
-    margin: -10px 90px 0;
-  }
 }
 .menu_content .menu_image img {
   width: 100%;
@@ -507,6 +495,15 @@ header .logo_header {
   font-size: larger;
   line-height: 25px;
   margin-left: 20px;
+}
+@media screen and (min-width: 992px) {
+  .menu_content .menu_items .menu_title {
+    gap: 350px;
+    font-size: xx-large;
+    line-height: 25px;
+    margin: 20px 50px;
+    justify-content: space-between;
+  }
 }
 .menu_content .menu_items .menu_title h1 {
   margin: unset;
@@ -558,17 +555,22 @@ header .logo_header {
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail {
   flex: 1;
   padding: 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  min-width: 0;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail--name {
   font-size: 18px;
   font-weight: 900;
   padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  padding-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail--accompagn {
   margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .btn_price {
   display: flex;
@@ -578,6 +580,7 @@ header .logo_header {
   align-items: flex-end;
   line-height: 35px;
   justify-content: flex-end;
+  white-space: nowrap;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .btn_circle {
   position: absolute;
@@ -595,6 +598,7 @@ header .logo_header {
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  white-space: nowrap;
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .fa-check-circle {
   animation-name: spin;
@@ -636,8 +640,7 @@ header .logo_header {
   width: 100%;
   height: 100%;
 }
-
-.title {
+.preloader .title {
   display: flex;
   justify-content: center;
   position: relative;
@@ -649,8 +652,7 @@ header .logo_header {
   font-size: 12px;
   letter-spacing: 2px;
 }
-
-.loader {
+.preloader .loader {
   display: block;
   position: relative;
   left: 50%;
@@ -667,8 +669,7 @@ header .logo_header {
   animation-timing-function: ease-in-out;
   overflow: hidden;
 }
-
-.loader:before {
+.preloader .loader:before {
   content: "";
   position: absolute;
   top: 5px;
@@ -682,8 +683,7 @@ header .logo_header {
   -ms-animation: loader 2s linear infinite;
   animation: loader 2s linear infinite;
 }
-
-.loader:after {
+.preloader .loader:after {
   content: "";
   position: absolute;
   top: 15px;

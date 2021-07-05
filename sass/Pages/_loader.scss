@@ -9,65 +9,61 @@
     z-index: 999;
     width: 100%;
     height: 100%;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    top: 40%;
-    font-family: Shrikhand, Roboto, sans-serif;
-    color: $secondry;
-    font-weight: normal;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.loader {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 40%;
-    width: 120px;
-    height: 120px;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    border: 8px solid transparent;
-    border-top-color: #9356DC;
-    -webkit-animation: loader 2.5s linear infinite;
-    -ms-animation: loader 2.5s linear infinite;
-    animation: loader 2.5s linear infinite;
-    animation-timing-function: ease-in-out ;
-    overflow: hidden; 
-}
-
-.loader:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 7px solid transparent;
-    border-top-color: #99E2D0;
-    -webkit-animation: loader 2s linear infinite;
-    -ms-animation: loader 2s linear infinite;
-    animation: loader 2s linear infinite;
-}
-
-.loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 6px solid transparent;
-    border-top-color: #FF79DA;
-    -webkit-animation: loader 1s linear infinite;
-    -ms-animation: loader 1s linear infinite;
-    animation: loader 1s linear infinite;
+    .title {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        top: 40%;
+        font-family: Shrikhand, Roboto, sans-serif;
+        color: $secondry;
+        font-weight: normal;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 40%;
+        width: 120px;
+        height: 120px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 8px solid transparent;
+        border-top-color: #9356DC;
+        -webkit-animation: loader 2.5s linear infinite;
+        -ms-animation: loader 2.5s linear infinite;
+        animation: loader 2.5s linear infinite;
+        animation-timing-function: ease-in-out ;
+        overflow: hidden; 
+        &:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 7px solid transparent;
+            border-top-color: #99E2D0;
+            -webkit-animation: loader 2s linear infinite;
+            -ms-animation: loader 2s linear infinite;
+            animation: loader 2s linear infinite;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 6px solid transparent;
+            border-top-color: #FF79DA;
+            -webkit-animation: loader 1s linear infinite;
+            -ms-animation: loader 1s linear infinite;
+            animation: loader 1s linear infinite;
+        }
+    }    
 }

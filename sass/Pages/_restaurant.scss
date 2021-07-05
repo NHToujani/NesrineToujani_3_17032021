@@ -65,6 +65,10 @@
       }
 }
 .desktop_row{
+  @include tablette{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
   @include desktop {
     display: grid;
     grid-template-columns: repeat(4, 25%);

@@ -1,8 +1,5 @@
 .menu_content {
   background-color: $background;
-  @include desktop{
-    margin: -10px 90px 0;
-  }
   .menu_image {
     img {
       width: 100%;
@@ -23,18 +20,25 @@
       font-size: larger;
       line-height: 25px;
       margin-left: 20px;
-        h1{
-          margin: unset;
-        }
+      @include desktop{
+        gap: 350px;
+        font-size: xx-large;
+        line-height: 25px;
+        margin: 20px 50px;
+        justify-content: space-between;
       }
+      h1{
+        margin: unset;
+      }
+    }
     .desktop_section{
       display: grid;
       @include desktop{
-          grid-template-columns: repeat(3, 34%);
-          .desktop_column{
-            width: 95%;
-          }
-    }
+      grid-template-columns: repeat(3, 34%);
+        .desktop_column{
+          width: 95%;
+        }
+      }
     .designation{
       font-size: 19px;
       font-weight: 400;
@@ -57,17 +61,24 @@
           width: 98%;
         }
         .meal_detail{
-            flex: 1;
-            padding: 5px;
-            @include ellipsis;
-            &--name{            
-              font-size: 18px;
-              font-weight: 900;
-              padding-bottom: 5px;
-            }
-            &--accompagn{
-              margin-left: 5px;
-            }
+          flex: 1;
+          padding: 5px;
+          min-width: 0;
+          &--name{            
+            font-size: 18px;
+            font-weight: 900;
+            padding-bottom: 5px;
+            font-size: 18px;
+            font-weight: 900;
+            padding-bottom: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          &--accompagn{
+            margin-left: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
         .btn_price{
           display: flex;
@@ -77,6 +88,7 @@
           align-items: flex-end;
           line-height: 35px;
           justify-content: flex-end;
+          white-space: nowrap;
         }
         .btn_circle{
           position: absolute;
@@ -94,11 +106,11 @@
           background-color: $tertiary;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-                 
-        }
-        @include button;
+          white-space: nowrap;             
+          }
+          @include button;
+        }  
       }
-    }
     }
   }
 }

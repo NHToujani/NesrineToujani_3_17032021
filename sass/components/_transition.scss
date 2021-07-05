@@ -17,14 +17,10 @@
         position: absolute;
         z-index: 1;
         background: linear-gradient(139deg, #FF79DA 10%, #9356DC 95%);
-            background-clip: text;
-        -webkit-background-clip: text;
-            color: transparent;        
-        &:hover{
-            transform: scale(1);
-            transition: transform 500ms ease-in-out;
-            transform-origin: bottom center;
-        }
+            background-clip: content-box;
+        -webkit-background-clip: content-box;
+            color: transparent;     
+        transition: background 0.5s ease;
     }
 }
 .menu_descript{  
@@ -35,11 +31,7 @@
         .btn_price{ 
             transition: transform 1000ms;
             transform: translateX(0px);             
-        }
-        .fa-check-circle{
-            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-            transform: rotate(0deg);
-            }   
+        }  
      &:hover{
         .btn_circle{
             transition: transform 1000ms;
@@ -48,15 +40,16 @@
         .btn_price{
             transition: transform 1000ms;
             transform: translateX(-40px);
-            }
-        .meal_detail{
-            @include ellipsis;
-            }
-        .fa-check-circle{
-            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            }        
+        .btn_circle--check{
+            transition: transform 1000ms ease-in-out;
             transform: rotate(360deg);
             }   
+        .meal_detail{
+            padding-right: 30px !important;
         }
+    }
+        
 }
 .btn {
     background-color:linear-gradient(175deg, $secondry, 45%, $primary);
