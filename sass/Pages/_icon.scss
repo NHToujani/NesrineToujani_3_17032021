@@ -1,13 +1,13 @@
-.restaurant_menu{
-    .card_heart--resto{
-        position: absolute;
-        display: flex;
-        justify-content: flex-end;
-        right: 35px;
-        bottom: 50px;
-        @include desktop{
-            right: 35px;
-            bottom: 42px;
-        }
+.restaurant_menu {
+  .card_heart--resto {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 35px;
+    bottom: 50px;
+    @include desktop {
+      right: 35px;
+      bottom: 42px;
+    }
   }
 }

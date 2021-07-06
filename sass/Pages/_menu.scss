@@ -8,46 +8,60 @@
       object-fit: cover;
     }
   }
-  .menu_items{
+  .menu_items {
     padding: 10px;
     position: sticky;
     background-color: $background;
     border-radius: 50px 50px 0 0;
     margin-top: -55px;
-    .menu_title{
+    .menu_title {
       display: flex;
       gap: 70px;
       font-size: larger;
       line-height: 25px;
-      margin-left: 20px;
-      @include desktop{
+      margin: 20px;
+      @include mobile {
+        gap: 30px;
+        font-size: large;
+        margin: 12px;
+      }
+      @include tablette {
+        justify-content: center;
+
+      }
+      @include desktop {
         gap: 350px;
         font-size: xx-large;
         line-height: 25px;
         margin: 20px 50px;
         justify-content: space-between;
       }
-      h1{
+      h1 {
         margin: unset;
       }
     }
-    .desktop_section{
-      
-      @include desktop{
+    .desktop_section {
+      @include tablette {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include desktop {
         display: grid;
         grid-template-columns: repeat(3, 34%);
-        .desktop_column{
+        .desktop_column {
           width: 95%;
         }
       }
-    .designation{
+    }
+    .designation {
       font-size: 19px;
       font-weight: 400;
       margin: 20px 0;
-      @include line      
+      @include line;
     }
-    .carte_menu{
-      .menu_descript{
+    .carte_menu {
+      .menu_descript {
         display: flex;
         width: 100%;
         height: 60px;
@@ -58,15 +72,15 @@
         cursor: pointer;
         @include ellipsis;
         @extend %shadow;
-        @include desktop{
+        @include desktop {
           width: 98%;
           margin: 15px 60px 5px 0;
         }
-        .meal_detail{
+        .meal_detail {
           flex: 1;
           padding: 5px;
           min-width: 0;
-          &--name{            
+          &--name {
             font-size: 18px;
             font-weight: 900;
             padding-bottom: 5px;
@@ -76,13 +90,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
           }
-          &--accompagn{
+          &--accompagn {
             margin-left: 5px;
             overflow: hidden;
             text-overflow: ellipsis;
           }
         }
-        .btn_price{
+        .btn_price {
           display: flex;
           font-weight: 700;
           padding: 0 30px 0 5px;
@@ -92,7 +106,7 @@
           justify-content: flex-end;
           white-space: nowrap;
         }
-        .btn_circle{
+        .btn_circle {
           position: absolute;
           right: 0;
           top: 0;
@@ -108,15 +122,14 @@
           background-color: $tertiary;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-          white-space: nowrap;             
-          }
-          @include button;
-        }  
+          white-space: nowrap;
+        }
+        @include button;
       }
     }
   }
 }
-.btn_order{
+.btn_order {
   display: grid;
   @extend .presentation_explor--btn;
   font-size: large;

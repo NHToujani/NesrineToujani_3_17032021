@@ -1,4 +1,4 @@
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript, .restaurant_menu {
+.menu_content .menu_items .carte_menu .menu_descript, .restaurant_menu {
   box-shadow: 0 2px 20px -2px #d5d5d5;
 }
 
@@ -244,6 +244,12 @@ header .logo_header {
 }
 .header_menu i {
   margin: 15px 30px 0;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .header_menu {
+    gap: 220px;
+    justify-content: end;
+  }
 }
 @media screen and (min-width: 992px) {
   .header_menu {
@@ -498,7 +504,19 @@ header .logo_header {
   gap: 70px;
   font-size: larger;
   line-height: 25px;
-  margin-left: 20px;
+  margin: 20px;
+}
+@media (max-width: 319px) {
+  .menu_content .menu_items .menu_title {
+    gap: 30px;
+    font-size: large;
+    margin: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu_content .menu_items .menu_title {
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 992px) {
   .menu_content .menu_items .menu_title {
@@ -512,6 +530,12 @@ header .logo_header {
 .menu_content .menu_items .menu_title h1 {
   margin: unset;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu_content .menu_items .desktop_section {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 992px) {
   .menu_content .menu_items .desktop_section {
     display: grid;
@@ -521,12 +545,12 @@ header .logo_header {
     width: 95%;
   }
 }
-.menu_content .menu_items .desktop_section .designation {
+.menu_content .menu_items .designation {
   font-size: 19px;
   font-weight: 400;
   margin: 20px 0;
 }
-.menu_content .menu_items .desktop_section .designation::after {
+.menu_content .menu_items .designation::after {
   content: "";
   border: 1px solid #99e2d0;
   background-color: #99e2d0;
@@ -536,7 +560,7 @@ header .logo_header {
   width: 48px;
   position: relative;
 }
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript {
+.menu_content .menu_items .carte_menu .menu_descript {
   display: flex;
   width: 100%;
   height: 60px;
@@ -550,17 +574,17 @@ header .logo_header {
   white-space: nowrap;
 }
 @media screen and (min-width: 992px) {
-  .menu_content .menu_items .desktop_section .carte_menu .menu_descript {
+  .menu_content .menu_items .carte_menu .menu_descript {
     width: 98%;
     margin: 15px 60px 5px 0;
   }
 }
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail {
+.menu_content .menu_items .carte_menu .menu_descript .meal_detail {
   flex: 1;
   padding: 5px;
   min-width: 0;
 }
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail--name {
+.menu_content .menu_items .carte_menu .menu_descript .meal_detail--name {
   font-size: 18px;
   font-weight: 900;
   padding-bottom: 5px;
@@ -570,12 +594,12 @@ header .logo_header {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail--accompagn {
+.menu_content .menu_items .carte_menu .menu_descript .meal_detail--accompagn {
   margin-left: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript .btn_price {
+.menu_content .menu_items .carte_menu .menu_descript .btn_price {
   display: flex;
   font-weight: 700;
   padding: 0 30px 0 5px;
@@ -585,7 +609,7 @@ header .logo_header {
   justify-content: flex-end;
   white-space: nowrap;
 }
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript .btn_circle {
+.menu_content .menu_items .carte_menu .menu_descript .btn_circle {
   position: absolute;
   right: 0;
   top: 0;
@@ -603,7 +627,7 @@ header .logo_header {
   border-bottom-right-radius: 15px;
   white-space: nowrap;
 }
-.menu_content .menu_items .desktop_section .carte_menu .menu_descript .fa-check-circle {
+.menu_content .menu_items .carte_menu .menu_descript .fa-check-circle {
   animation-name: spin;
   animation-duration: 1000ms;
   animation-iteration-count: 1;
