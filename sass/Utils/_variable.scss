@@ -1,22 +1,22 @@
 // Couleurs principales:
 $primary: #9356dc;
-$secondry:  #ff79da;
+$secondry: #ff79da;
 $tertiary: #99e2d0;
 
 // Couleurs secondaires:
 $shadow: #d5d5d5;
 $background: #f6f6f6;
-$white:#ffffff;
-$black:#353535;
+$white: #ffffff;
+$black: #353535;
 
 //Valeurs par défaut:
-$width:100%;
+$width: 100%;
 
 // Responsive:
 $breakpoints: (
-    mobile-min: 319px,
-    mobile: 767px,
-    tablette-min: 768px,
-    tablette-max: 991px, 
-    desktop: 992px
-)
+  mobile-min: 320px,
+  mobile: 767px,
+  tablette-min: 768px,
+  tablette-max: 991px,
+  desktop: 992px,
+);

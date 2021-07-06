@@ -1,107 +1,71 @@
-// .card_heart--resto{    
-//     cursor: pointer;
-//     .empty{
-//         position: absolute;
-//         font-size: 24px;
-//         z-index: 2;
-//         color: black;
-//         background: $white;
-//         &:hover{        
-//             opacity: 0;
-//         }
-//         @include background;       
-//     }
-//     .fill{
-//         font-size: 24px;
-//         position: absolute;
-//         z-index: 1;
-//         background: linear-gradient(139deg, #FF79DA 10%, #9356DC 95%);
-//             background-clip: text;
-//         -webkit-background-clip: text;
-//             color: transparent;
-//         &:hover{
-//             transition: all 4000ms ease-in-out;
-//         }
-//     }
-// }
-.card_heart--resto{
-    
-    cursor: pointer;
-    .empty{
-        position: absolute;
-        font-size: 24px;
-        z-index: 2;
-        color: black;
-        background: transparent;
-	opacity: 1; 
+
+.card_heart--resto {
+  cursor: pointer;
+  .empty {
+    position: absolute;
+    font-size: 24px;
+    z-index: 2;
+    color: black;
+    background: transparent;
+    opacity: 1;
+  }
+  .fill {
+    font-size: 24px;
+    position: absolute;
+    z-index: 1;
+    transform: scale(0);
+    background: linear-gradient(to bottom, $primary, $secondry);
+    background: -webkit-linear-gradient(to bottom, $primary, $secondry);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:hover {
+    .empty {
+      opacity: 0;
     }
-    .fill{
-        font-size: 24px;
-        position: absolute;
-        z-index: 1;
-	transform: scale(0);
-        background:linear-gradient(to bottom, $primary, $secondry);
-        background:-webkit-linear-gradient(to bottom, $primary, $secondry);
-                background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        
+    .fill {
+      transform: scale(1);
+      transition: transform 500ms ease-in-out;
+      transform-origin: bottom center;
     }
-    &:hover{
-	.empty {        
-            opacity: 0;
-        }
-	.fill {
-	    transform: scale(1);
-	    transition: transform 500ms ease-in-out;
-            transform-origin: bottom center;
-    }
+  }
 }
-}
-.menu_descript{  
-        .btn_circle{
-            transition: transform 1000ms;
-            transform: translateX(66px);
-        }  
-        .btn_price{ 
-            transition: transform 1000ms;
-            transform: translateX(0px);             
-        }  
-     &:hover{
-        .btn_circle{
-            transition: transform 1000ms;
-            transform: translateX(0);
-            }
-        .btn_price{
-            transition: transform 1000ms;
-            transform: translateX(-40px);
-            }        
-        .btn_circle--check{
-            transition: transform 1000ms ease-in-out;
-            transform: rotate(360deg);
-            }   
-        .meal_detail{
-            padding-right: 30px !important;
-        }
+.menu_descript {
+  .btn_circle {
+    transition: transform 1000ms;
+    transform: translateX(66px);
+  }
+  .btn_price {
+    transition: transform 1000ms;
+    transform: translateX(0px);
+  }
+  &:hover {
+    .btn_circle {
+      transition: transform 1000ms;
+      transform: translateX(0);
     }
-        
+    .btn_price {
+      transition: transform 1000ms;
+      transform: translateX(-40px);
+    }
+    .btn_circle--check {
+      transition: transform 1000ms ease-in-out;
+      transform: rotate(360deg);
+    }
+    .meal_detail {
+      padding-right: 30px !important;
+    }
+  }
 }
 .btn {
-    background-color:linear-gradient(175deg, $secondry, 45%, $primary);
-    transition: transform 330ms ease-in-out;
-    transform: scale(0);
-    &:hover{
-        transform: scale(1);
-    }
+  background-color: linear-gradient(175deg, $secondry, 45%, $primary);
+  transition: transform 1000ms ease-in-out;
 }
 
 @for $i from 1 to 4 {
-    .fade-#{$i}{  
-    animation: fadein #{$i*0.5s}, jump #{$i*1s};
-    transition-timing-function: ease-in-out;    
-    }
+  .fade-#{$i} {
+    animation: fadein #{$i * 0.5s}, jump #{$i * 1s};
+    transition-timing-function: ease-in-out;
+  }
 }
-
-         
-
-

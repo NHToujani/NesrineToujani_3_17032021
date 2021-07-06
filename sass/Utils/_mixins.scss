@@ -1,67 +1,66 @@
 @mixin i {
-    float: right;
-    position: relative;
-    font-size: x-large;
-    bottom: 50px;
-    right: 25px;
+  float: right;
+  position: relative;
+  font-size: x-large;
+  bottom: 50px;
+  right: 25px;
 }
 @mixin mobile {
-    @media (max-width: map-get($breakpoints, mobile-min)) {
-        @content;
-    }
+  @media (max-width: map-get($breakpoints, mobile-min)) {
+    @content;
+  }
 }
 @mixin tablette {
-    @media screen and (min-width: map-get($breakpoints, tablette-min)) and (max-width: map-get($breakpoints, tablette-max)){
-        @content;
-    }
+  @media screen and (min-width: map-get($breakpoints, tablette-min)) and (max-width: map-get($breakpoints, tablette-max)) {
+    @content;
+  }
 }
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
-        @content;
-    }
-}
-@mixin line($color:$tertiary, $size: 1px) {
-    &::after{
-        content: "";
-        border: $size solid $color;
-        background-color: $color;
-        bottom: $size * -3;
-        display: block;
-        height: $size;
-        width: $size * 48;
-        position: relative;
-      }
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
   }
-%shadow{
-    box-shadow: 0 2px 20px -2px #d5d5d5;
+}
+@mixin line($color: $tertiary, $size: 1px) {
+  &::after {
+    content: "";
+    border: $size solid $color;
+    background-color: $color;
+    bottom: $size * -3;
+    display: block;
+    height: $size;
+    width: $size * 48;
+    position: relative;
+  }
+}
+%shadow {
+  box-shadow: 0 2px 20px -2px #d5d5d5;
 }
 %background {
-    background:linear-gradient (347deg, #9356dc 35%, #ff79da 100%);
+  background: linear-gradient (347deg, #9356dc 35%, #ff79da 100%);
 }
-@mixin prix{
-    transition: transform 250ms;
-    transform: translateX(-60px);
+@mixin prix {
+  transition: transform 250ms;
+  transform: translateX(-60px);
 }
-@mixin button{
-    @if (menu_descript:hover) {
-        .fa-check-circle{
-            animation-name: spin;
-            animation-duration: 1000ms;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
-        }
-              
+@mixin button {
+  @if (menu_descript: hover) {
+    .fa-check-circle {
+      animation-name: spin;
+      animation-duration: 1000ms;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
     }
+  }
 }
 
-@mixin ellipsis{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 @for $i from 1 to 4 {
-    .fade-#{$i}{  
-    animation: fadein #{$i*0.5s}, jump #{$i*1s};
-    transition-timing-function: ease-in-out;    
-    }
+  .fade-#{$i} {
+    animation: fadein #{$i * 0.5s}, jump #{$i * 1s};
+    transition-timing-function: ease-in-out;
+  }
 }

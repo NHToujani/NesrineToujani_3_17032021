@@ -16,10 +16,10 @@
     margin-top: -55px;
     .menu_title {
       display: flex;
-      gap: 70px;
-      font-size: larger;
+      gap: 30px;
+      font-size: large;
+      margin: 12px;
       line-height: 25px;
-      margin: 20px;
       @include mobile {
         gap: 30px;
         font-size: large;
@@ -27,7 +27,6 @@
       }
       @include tablette {
         justify-content: center;
-
       }
       @include desktop {
         gap: 350px;

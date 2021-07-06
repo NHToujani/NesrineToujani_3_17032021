@@ -1,80 +1,79 @@
 .restaurant {
-    background-color: $background;
-    padding: 50px 0 50px 20px;
-    @include desktop{
-      padding: 0 10px 50px 10px;
+  background-color: $background;
+  padding: 50px 0 50px 20px;
+  @include desktop {
+    padding: 0 10px 50px 10px;
+  }
+  h2 {
+    font-size: 20px;
+    @include desktop {
+      padding: 10px;
     }
-    h2 {
-      font-size: 20px;
-      @include desktop{
-        padding: 10px;
-      }
+  }
+
+  &_menu {
+    background-color: $white;
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    align-self: center;
+    position: relative;
+    margin: 10px 10px 20px 10px;
+    @extend %shadow;
+    @include desktop {
+      display: block;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
-    
-    &_menu {
-        background-color:$white;
-        width: 90%;
-        border-radius: 15px;
-        display: flex;
-        align-self: center;
-        position: relative;
-        margin: 10px 10px 20px 10px;
-        @extend %shadow;
-        @include desktop {
-          display: block;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-        }
-        .etiquette{        
-          width: 80px;
-          height: 30px;    
-          border-radius: 3px;
-          background-color: #99e2d0;
-          font-size: 0.9em;
-          font-weight: 500;
-          color: #0F9070;
-          position: absolute;
-          margin: 13px 20px;
-          right: 15px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          top: 15px;
-        }
-        .card_description{
-          position: relative;
-          margin: 10px;
-        }        
-      }    
-      a {        
-        img {
-          height: 170px;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 15px 15px 0 0;
-        }
-        @include desktop{
-          height: 210px;
-        }
-      }
-      p {
-        @include desktop{
-          margin-left: 10px;
-        }
-      }
+    .etiquette {
+      width: 80px;
+      height: 30px;
+      border-radius: 3px;
+      background-color: #99e2d0;
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #0f9070;
+      position: absolute;
+      margin: 13px 20px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 15px;
+    }
+    .card_description {
+      position: relative;
+      margin: 10px;
+    }
+  }
+  a {
+    img {
+      height: 170px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+    @include desktop {
+      height: 210px;
+    }
+  }
+  p {
+    @include desktop {
+      margin-left: 10px;
+    }
+  }
 }
-.desktop_row{
-  @include tablette{
+.desktop_row {
+  @include tablette {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
   @include desktop {
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    h2{
+    h2 {
       text-align: left;
     }
   }
 }
-  
