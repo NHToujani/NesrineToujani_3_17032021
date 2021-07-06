@@ -138,10 +138,12 @@ body, html {
   position: absolute;
   z-index: 1;
   background: linear-gradient(139deg, #FF79DA 10%, #9356DC 95%);
-  background-clip: content-box;
-  -webkit-background-clip: content-box;
+  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
-  transition: background 0.5s ease;
+}
+.card_heart--resto .fill:hover {
+  transition: all 4000ms ease-in-out;
 }
 
 .menu_descript .btn_circle {
@@ -540,7 +542,7 @@ header .logo_header {
   height: 60px;
   background-color: #ffffff;
   border-radius: 15px;
-  margin: 15px 60px 5px 0;
+  margin: 15px 0 5px 0;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -550,6 +552,7 @@ header .logo_header {
 @media screen and (min-width: 992px) {
   .menu_content .menu_items .desktop_section .carte_menu .menu_descript {
     width: 98%;
+    margin: 15px 60px 5px 0;
   }
 }
 .menu_content .menu_items .desktop_section .carte_menu .menu_descript .meal_detail {

@@ -1,5 +1,4 @@
-.card_heart--resto{
-    
+.card_heart--resto{    
     cursor: pointer;
     .empty{
         position: absolute;
@@ -17,10 +16,12 @@
         position: absolute;
         z-index: 1;
         background: linear-gradient(139deg, #FF79DA 10%, #9356DC 95%);
-            background-clip: content-box;
-        -webkit-background-clip: content-box;
-            color: transparent;     
-        transition: background 0.5s ease;
+            background-clip: text;
+        -webkit-background-clip: text;
+            color: transparent;
+        &:hover{
+            transition: all 4000ms ease-in-out;
+        }
     }
 }
 .menu_descript{  
