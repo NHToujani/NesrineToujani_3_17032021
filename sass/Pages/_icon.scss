@@ -1,3 +1,9 @@
+.restaurant_menu {
+  .card_heart--resto {
+    bottom: 50px;
+    top: unset;
+  }
+}
 .card_heart--resto {
   position: absolute;
   display: flex;
