@@ -14,14 +14,13 @@ header {
   }
 }
 .header_menu {
+  justify-content: unset;
   gap: 20px;
-  justify-content: flex-start;
   i {
     margin: 15px 30px 0;
   }
   @include tablette {
     gap: 220px;
-    justify-content: end;
   }
   @include desktop {
     gap: 160px;

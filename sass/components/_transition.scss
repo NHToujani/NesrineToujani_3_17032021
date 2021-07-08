@@ -33,39 +33,33 @@
 }
 .menu_descript {
   .btn_circle {
-    transition: transform 1000ms;
+    transition: transform 500ms;
     transform: translateX(66px);
   }
   .btn_price {
-    transition: transform 1000ms;
+    transition: transform 500ms;
     transform: translateX(0px);
   }
   &:hover {
     .btn_circle {
-      transition: transform 1000ms;
+      transition: transform 500ms;
       transform: translateX(0);
     }
     .btn_price {
-      transition: transform 1000ms;
-      transform: translateX(-40px);
+      transition: transform 500ms;
+      transform: translateX(-45px);
     }
     .btn_circle--check {
       transition: transform 1000ms ease-in-out;
       transform: rotate(360deg);
     }
-    .meal_detail {
-      padding-right: 30px !important;
+    .meal_detail-text {
+
+      width: calc(100% - 50px);
     }
   }
 }
 .btn {
-  background-color: linear-gradient(175deg, $secondry, 45%, $primary);
+  background-image: linear-gradient( $secondry, 45%, $primary);
   transition: transform 1000ms ease-in-out;
-}
-
-@for $i from 1 to 4 {
-  .fade-#{$i} {
-    animation: fadein #{$i * 0.5s}, jump #{$i * 1s};
-    transition-timing-function: ease-in-out;
-  }
 }
