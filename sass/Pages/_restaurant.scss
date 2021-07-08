@@ -6,9 +6,6 @@
   }
   h2 {
     font-size: 20px;
-    @include desktop {
-      padding: 10px;
-    }
   }
   &_menu {
     background-color: $white;

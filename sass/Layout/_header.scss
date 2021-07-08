@@ -8,21 +8,24 @@ header {
     }
   }
   .logo_header {
-    font-family: Shrikhand, Arial, sans-serif;
     font-size: 30px;
     font-weight: 100;
+    @include desktop{
+      font-size: 50px;
+    }
   }
 }
 .header_menu {
   justify-content: unset;
+  align-items: baseline;
   gap: 20px;
   i {
     margin: 15px 30px 0;
   }
   @include tablette {
-    gap: 220px;
+    gap: 175px;
   }
   @include desktop {
-    gap: 160px;
+    gap: 250px;
   }
 }

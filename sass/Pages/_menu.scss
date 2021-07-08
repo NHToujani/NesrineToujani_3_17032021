@@ -130,6 +130,13 @@
   }
 }
 .btn_order {
+  margin: 20px auto 40px 85px;
   @extend .presentation_explor--btn;
   font-size: large;
+  @include tablette{
+    margin: 20px auto 40px 300px;
+  }
+  @include desktop{
+    margin: 20px auto 40px 420px;
+  }
 }

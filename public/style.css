@@ -191,6 +191,7 @@ footer ul {
   padding: 0 1.5em;
 }
 footer ul i {
+  margin-right: 5px;
   color: #ffffff;
 }
 footer ul a {
@@ -211,13 +212,18 @@ header {
   }
 }
 header .logo_header {
-  font-family: Shrikhand, Arial, sans-serif;
   font-size: 30px;
   font-weight: 100;
+}
+@media screen and (min-width: 992px) {
+  header .logo_header {
+    font-size: 50px;
+  }
 }
 
 .header_menu {
   justify-content: unset;
+  align-items: baseline;
   gap: 20px;
 }
 .header_menu i {
@@ -225,12 +231,12 @@ header .logo_header {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header_menu {
-    gap: 220px;
+    gap: 175px;
   }
 }
 @media screen and (min-width: 992px) {
   .header_menu {
-    gap: 160px;
+    gap: 250px;
   }
 }
 
@@ -300,6 +306,9 @@ header .logo_header {
   white-space: pre;
   margin: 20px auto 40px auto;
   padding: 15px;
+}
+.presentation_explor--btn:visited, .btn_order:visited {
+  color: #ffffff;
 }
 .presentation_explor--btn:hover, .btn_order:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6), inset -1px -1px 2px #9356dc;
@@ -384,11 +393,6 @@ header .logo_header {
 }
 .restaurant h2 {
   font-size: 20px;
-}
-@media screen and (min-width: 992px) {
-  .restaurant h2 {
-    padding: 10px;
-  }
 }
 .restaurant_menu {
   background-color: #ffffff;
@@ -608,7 +612,18 @@ header .logo_header {
 }
 
 .btn_order {
+  margin: 20px auto 40px 85px;
   font-size: large;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .btn_order {
+    margin: 20px auto 40px 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .btn_order {
+    margin: 20px auto 40px 420px;
+  }
 }
 
 .restaurant_menu .card_heart--resto {
@@ -625,7 +640,7 @@ header .logo_header {
 }
 @media screen and (min-width: 992px) {
   .card_heart--resto {
-    right: 35px;
+    right: 20px;
     bottom: 42px;
   }
 }
