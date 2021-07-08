@@ -8,12 +8,9 @@ header {
     }
   }
   .logo_header {
-    width: 165px;
-    height: 30px;
-    @include desktop {
-      width: 50%;
-      height: 50%;
-    }
+    font-family: Shrikhand, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
   }
 }
 .header_menu {

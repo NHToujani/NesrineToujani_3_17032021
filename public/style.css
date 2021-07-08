@@ -226,14 +226,9 @@ header {
   }
 }
 header .logo_header {
-  width: 165px;
-  height: 30px;
-}
-@media screen and (min-width: 992px) {
-  header .logo_header {
-    width: 50%;
-    height: 50%;
-  }
+  font-family: Shrikhand, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 100;
 }
 
 .header_menu {
@@ -314,7 +309,7 @@ header .logo_header {
   height: 50px;
   color: #ffffff;
   border-radius: 50px;
-  background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
+  background-image: linear-gradient(#ff79da 0%, #9356dc 100%);
   box-shadow: 3px 5px 7px #d5d5d5;
   position: relative;
   z-index: 1;
@@ -324,7 +319,7 @@ header .logo_header {
 }
 .presentation_explor--btn:hover, .btn_order:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6), inset -1px -1px 2px #9356dc;
-  background: linear-gradient(175deg, lighten #ff79da, 4% 0%, lighten #9356dc, 1% 100%);
+  background-image: linear-gradient(lighten #ff79da, 4% 0%, lighten #9356dc, 1% 100%);
 }
 @media screen and (min-width: 992px) {
   .presentation_explor {

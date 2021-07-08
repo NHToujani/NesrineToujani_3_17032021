@@ -22,7 +22,7 @@
       color: $white;
       border-radius: 50px;
       // background-color: #9356DC;
-      background: linear-gradient(175deg, $secondry 0%, $primary 100%);
+      background-image: linear-gradient($secondry 0%, $primary 100%);
       box-shadow: 3px 5px 7px #d5d5d5;
       position: relative;
       z-index: 1;
@@ -31,11 +31,7 @@
       padding: 15px;
       &:hover {
         box-shadow: 5px 5px 10px rgb(0 0 0 / 60%), inset -1px -1px 2px $primary;
-        background: linear-gradient(
-          175deg,
-          lighten ($secondry, 4%) 0%,
-          lighten ($primary, 1%) 100%
-        );
+        background-image: linear-gradient(lighten ($secondry, 4%) 0%,lighten ($primary, 1%) 100%);
       }
     }
     @include desktop {
